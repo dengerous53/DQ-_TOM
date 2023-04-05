@@ -150,7 +150,7 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
@@ -158,7 +158,7 @@ async def next_page(bot, query):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
@@ -170,7 +170,7 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
@@ -178,7 +178,7 @@ async def next_page(bot, query):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
@@ -1608,7 +1608,7 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
@@ -1616,7 +1616,7 @@ async def auto_filter(client, msg, spoll=False):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
@@ -1628,7 +1628,7 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
@@ -1636,7 +1636,7 @@ async def auto_filter(client, msg, spoll=False):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
@@ -1644,10 +1644,6 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0, [
         InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
     ])
-    await message.delete()
-    m=await message.reply_text("🔍") 
-    await asyncio.sleep(1)
-    await m.delete()
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
