@@ -1141,6 +1141,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "sinfo":
         await query.answer(text=script.SINFO, show_alert=True)
+        
+    elif query.data == "malayalam":
+        await query.answer(text=script.MALAYALAM_TXT, show_alert=True)
+
+    elif query.data == "hindi":
+        await query.answer(text=script.HINDI_TXT, show_alert=True)
+        
+    elif query.data == "rendering_info":
+        await query.answer(text=script.RENDERING_TXT, show_alert=True)
+
+    elif query.data == "tamil":
+        await query.answer(text=script.TAMIL_TXT, show_alert=True)
 
     elif query.data == "start":
         buttons = [[
@@ -1205,7 +1217,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS))
         )
         await query.message.edit_text(
-            text=script.OWNER_TXT,
+            text=script.OWNER_INFO,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -1262,7 +1274,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "help2":
+    elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('🍷 ᴄʟᴏɴᴇ 🍷', callback_data='help2')
         ], [
