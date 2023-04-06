@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from plugins.helper.admin_check import admin_fliter                         
+from plugins.helpers.admin_check import admin_fliter                         
 
 @Client.on_message(filters.command("pin") & admin_fliter)
 async def pin(_, message: Message):
