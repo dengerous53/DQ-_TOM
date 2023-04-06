@@ -1238,10 +1238,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto("https://telegra.ph/file/f43db2f683adc95f1acaf.jpg")
         )
         await query.message.edit_text(
-            text=script.OWNER_INFO,
+            text=script.SUPPORT_INFO,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
