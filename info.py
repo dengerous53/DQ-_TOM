@@ -50,6 +50,9 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', '-1001616308548'))
 FILE_CHANNEL_LINK = environ.get('FILE_CHANNEL_LINK', 'https://t.me/TGxMULTIBOTDB')
 
+#Downloader
+DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
+
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shorturllink.in')
