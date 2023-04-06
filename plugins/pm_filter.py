@@ -1469,7 +1469,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         else:
             await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nIᴛꜱ ᴏɴʟʏ ғᴏʀ ᴍʏ ADMINS\n\n©ᴍʟᴢ ʙᴏᴛᴢ", show_alert=True)
             
-   elif query.data == "help2":
+    elif query.data == "help2":
         buttons = [[                               
             InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ​', callback_data='tele'),
             InlineKeyboardButton('sᴏɴɢ', callback_data='song'),
