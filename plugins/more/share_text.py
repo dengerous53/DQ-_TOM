@@ -27,4 +27,4 @@ async def share_text(client, message):
                InlineKeyboardButton("💌 ꜱʜᴀʀᴇ ɪᴅ 💌", url=f"https://t.me/share/url?url={quote(input_text)}")
              ],[
                InlineKeyboardButton("💌 ʙᴏᴛꜱ ᴜᴩᴅᴀᴛᴇs 💌", url=f"https://t.me/Hs_Botz")
-             ]])       
+             ]]))      
