@@ -1242,7 +1242,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ​', url='t.me/MLZ_BOTZ_SUPPORT'),
             InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs​', url='t.me/Tom_Updates')
             ],[
-            InlineKeyboardButton('✇ ʜᴏᴍᴇ ✇', callback_data="close_data")
+            InlineKeyboardButton('✇ ʜᴏᴍᴇ ✇', callback_data="start")
         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
