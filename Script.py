@@ -567,4 +567,12 @@ This file 📁 will be deleted ❌ from this group 📍 within 10 ⏰ minutes du
 🔖 Fɪʟᴇ Sɪᴢᴇ : {}
 
 ⏱ ᴜᴘᴛɪᴍᴇ : ꜰᴇᴡ ᴅᴀʏs ᴀɢᴏ​🤘 </b>"""
+    
+    CON_TXT = """<b>
+ᴄᴏᴜɴᴛʀʏ ɪɴғᴏ
+
+Tʜɪs ᴍᴏᴅᴜʟᴇ ɪs ᴛᴏ ғɪɴᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴄᴏᴜɴᴛʀɪᴇs
+
+• /country [𝖼𝗈𝗎𝗇𝗍𝗋𝗒 𝗇𝖺𝗆𝖾] 
+𝖤𝗑𝖺𝗆𝗉𝗅𝖾 :- /country India</b>"""
 
