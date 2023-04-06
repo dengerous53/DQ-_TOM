@@ -319,7 +319,10 @@ async def advantage_spoll_choker(bot, query):
 async def languages_cb_handler(client: Client, query: CallbackQuery):
 
     if int(query.from_user.id) not in [query.from_user.id, 0]:
-        return await query.answer((script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+         return await query.answer(
+            f"(script.ALRT_TXT.format(query.from_user.first_name)",
+            show_alert=True,
+        )
     
     _, search, key = query.data.split("#")
 
@@ -343,7 +346,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
     )
     req = query.from_user.id
     offset = 0
-    btn.append([InlineKeyboardButton(text="↭ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↭", callback_data=f"next_{req}_{key}_{offset}")])
+    btn.append([InlineKeyboardButton(text="↺ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↻", callback_data=f"next_{req}_{key}_{offset}")])
 
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
 
@@ -357,7 +360,10 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     chat_id = query.message.chat.id
     message = query.message
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer((script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+        return await query.answer(
+            f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
+            show_alert=True,
+        )
 
     search = f"{search} {lang}" 
 
