@@ -50,6 +50,12 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', '-1001616308548'))
 FILE_CHANNEL_LINK = environ.get('FILE_CHANNEL_LINK', 'https://t.me/TGxMULTIBOTDB')
 
+# This is required for the plugins involving the file system.
+TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
+
+# Command
+COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
+
 #Downloader
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
