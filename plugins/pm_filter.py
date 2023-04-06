@@ -1225,7 +1225,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto("https://telegra.ph/file/0b559f089120bc4edbc3d.jpg")
         )
         await query.message.edit_text(
             text=script.OWNER_INFO,
@@ -1475,7 +1475,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto("https://telegra.ph/file/ea1691cd8bcb7e721b8d1.jpg")
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -1499,7 +1499,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto("https://telegra.ph/file/ea1691cd8bcb7e721b8d1.jpg")
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
