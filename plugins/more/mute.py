@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import ChatPermissions
-from plugins.helper.admin_check import admin_check
-from plugins.helper.extract import extract_time, extract_user                               
+from plugins.helpers.admin_check import admin_check
+from plugins.helpers.extract import extract_time, extract_user                               
 
 
 @Client.on_message(filters.command("mute"))
