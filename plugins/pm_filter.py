@@ -1266,7 +1266,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto("https://telegra.ph/file/fc4749bdf6fc437ca58c2.jpg")
         )
         await query.message.edit_text(
             text=script.EARN_TXT,
@@ -1337,7 +1337,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto("https://telegra.ph/file/142c9a84418548b39883a.jpg")
         )
         await query.message.edit_text(
             text=script.HELPER_TXT.format(query.from_user.mention),
@@ -1360,7 +1360,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto("https://telegra.ph/file/3542c833f4d01dac04a4b.jpg")
         )
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
