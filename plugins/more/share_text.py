@@ -16,7 +16,7 @@ async def share_text(client, message):
         await message.reply_text(
             text=f"**Nᴏᴛɪᴄᴇ:**\n\n1. ʀᴇᴩʟʏ ᴛᴏ ᴀɴʏ ᴍᴇssᴀɢᴇ.\n2. ɴᴏ ᴍᴇᴅɪᴀ ꜱᴜᴩᴩᴏʀᴛ ﹝ sᴜᴩᴩᴏʀᴛs ᴏɴʟʏ ᴛᴇxᴛ ﹞\n\n**Jᴏɪɴ Nᴏᴡ Oᴜʀ Uᴩᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ**",                
             reply_to_message_id=reply_id,               
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💌 ʙᴏᴛꜱ ᴜᴩᴅᴀᴛᴇs 💌", url=f"https://t.me/Hs_Botz")]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("💌 ʙᴏᴛꜱ ᴜᴩᴅᴀᴛᴇs 💌", url=f"https://t.me/MLZ_BOTZ_SUPPORT")]])
             )                                                   
         return
     await message.reply_text(
@@ -26,5 +26,5 @@ async def share_text(client, message):
              [[
                InlineKeyboardButton("💌 ꜱʜᴀʀᴇ ɪᴅ 💌", url=f"https://t.me/share/url?url={quote(input_text)}")
              ],[
-               InlineKeyboardButton("💌 ʙᴏᴛꜱ ᴜᴩᴅᴀᴛᴇs 💌", url=f"https://t.me/Hs_Botz")
+               InlineKeyboardButton("💌 ʙᴏᴛꜱ ᴜᴩᴅᴀᴛᴇs 💌", url=f"https://t.me/MLZ_BOTZ")
              ]]))      
