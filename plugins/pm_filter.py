@@ -745,15 +745,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 mh = await client.send_cached_media(
                     chat_id=FILE_CHANNEL,
                     file_id=file_id,
-                    caption=script.FILE_CHANNEL_TXT.format(query.from_user.mention, title, size),
+                    caption=script.FILE_CHANNEL_TXT.format(title, size, query.from_user.mention, query.message.chat.title, temp.U_NAME),
                     protect_content=True if ident == "filep" else False,
                     reply_markup=InlineKeyboardMarkup(
-                        [[ 
-                          InlineKeyboardButton('🇮🇳 ᴍᴀʟ', callback_data='malayalam'),
-                          InlineKeyboardButton('🇮🇳 ʜɪɴ', callback_data='hindi'),
-                          InlineKeyboardButton('🇮🇳 ᴛᴀᴍ', callback_data='tamil')
-                        ],[                         
-                          InlineKeyboardButton("🔋 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ​ 🔋", url='t.me/CKTalkies')
+                        [[
+                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
+                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                         ]]
                     )
                 )
@@ -765,13 +762,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [
                         [
                             InlineKeyboardButton("📥  ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ  📥", url=f"{mh.link}")
+                        ],
+                        [
+                            InlineKeyboardButton("⚠️ ᴄᴀɴ'ᴛ ᴀᴄᴄᴇss ❓ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ⚠️", url=f"{FILE_CHANNEL_LINK}")
                         ]
                     ]
                 )
             )
-            await asyncio.sleep(600)
-            await mh8.delete()  
-            await mh.delete()            
+            await asyncio.sleep(1000)
+            await mh8.delete()
+            await mh.delete()
             del mh8, mh
         except Exception as e:
             logger.exception(e, exc_info=True)
