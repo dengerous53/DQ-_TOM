@@ -335,8 +335,6 @@ coммand and υѕeѕ
 ┣🔆 ᴘᴏᴡᴇʀᴇᴅ ʙʏ:- <a href='https://t.me/TGxMULTIBOT'>ᴛᴏᴍ​</a> 
 ┗🗃 ᴛᴏᴛᴀʟ ꜰɪʟᴇs:-{}
 
-⚠️ ᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ 🗑️
-
 ❇️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {}</b>"""
     
     SUPPORT_INFO = """<b>
@@ -550,24 +548,26 @@ Cᴏᴍᴍᴀɴᴅꜱ ᴀɴᴅ Uꜱᴀɢᴇ:
 • /dkick - ᴛᴏ ᴋɪᴄᴋ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛꜱ.</b>"""
     
     FILE_CHANNEL_TXT = """
-🍷 ʀᴇǫᴜsᴛᴇᴅ ʙʏ : {}
+<b>🏷️ Tɪᴛʟᴇ :- <code>{}</code>
 
-<code>{}</code>
-------------------------------------
-This file 📁 will be deleted ❌ from this group 📍 within 10 ⏰ minutes due to copyright ©️
+⚙️ Sɪᴢᴇ :- {}
 
-⏩ How To Forward : <a href='https://t.me/TelegramTips/242'>Click Here</a>"""
-    
+🕵️‍♂️ Rᴇǫᴜᴇsᴛᴇᴅ Bʏ :- {}
+
+🔅 Pᴏᴡᴇʀᴇᴅ Bʏ :- {}
+
+<a href='t.me/{}'>‣ Tʜɪs Mᴇssᴀɢᴇ Wɪʟʟ ʙᴇ Aᴜᴛᴏ-Dᴇʟᴇᴛᴇᴅ Aғᴛᴇʀ 𝟷𝟶 Mɪɴᴜᴛᴇs. Kɪɴᴅʟʏ Fᴏʀᴡᴀʀᴅ Yᴏᴜʀ Fɪʟᴇs Tᴏ Sᴀᴠᴇᴅ.</a></b>"""
+
     FILE_READY_TXT = """
-<b>ʜᴇʟʟᴏ {} 💞  
+<b>Hᴇʏ {}
+ 
+📫 Yᴏᴜʀ Fɪʟᴇ Is Sᴇɴᴛ Tᴏ Cʜᴀɴɴᴇʟ, 
+Cʜᴇᴄᴋ Dᴏᴡɴ Tᴏ Vɪᴇᴡ.
 
-✅ ʏᴏᴜʀ ғɪʟᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴜᴘʟᴏᴀᴅᴇᴅ ᴛᴏ ᴄʜᴀɴɴᴇʟ ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴅᴏᴡɴʟᴏᴀᴅ ʙᴜᴛᴛᴏɴ,
+📂 Fɪʟᴇ Nᴀᴍᴇ :- <code>{}</code>
 
-🗃️ Fɪʟᴇ Nᴀᴍᴇ : <code>{}</code>
-
-🔖 Fɪʟᴇ Sɪᴢᴇ : {}
-
-⏱ ᴜᴘᴛɪᴍᴇ : ꜰᴇᴡ ᴅᴀʏs ᴀɢᴏ​🤘 </b>"""
+⚙️ Fɪʟᴇ Sɪᴢᴇ :- {}</b>
+"""
     
     CON_TXT = """<b>
 ᴄᴏᴜɴᴛʀʏ ɪɴғᴏ
