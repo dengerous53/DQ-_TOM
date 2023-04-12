@@ -273,7 +273,7 @@ async def next_page(bot, query):
                     ],
                 )
     btn.insert(0, [
-        InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+        InlineKeyboardButton("Languages", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
     ])
     try:
         await query.edit_message_reply_markup(
@@ -2590,7 +2590,7 @@ async def auto_filter(client, msg, spoll=False):
             )
 
     btn.insert(0, [
-        InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+        InlineKeyboardButton("Languages", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
     ])
 
     if offset != "":
