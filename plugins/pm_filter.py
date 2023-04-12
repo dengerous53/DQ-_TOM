@@ -341,7 +341,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
         0,
         [
             InlineKeyboardButton(
-                text="☟  ꜱᴇʟᴇᴄᴛ ʏᴏᴜʀ ʟᴀɴɢᴜᴀɢᴇꜱ  ☟", callback_data="ident"
+                text="☟  ꜱᴇʟᴇᴄᴛ ʏᴏᴜʀ ʟᴀɴɢᴜᴀɢᴇꜱ  ☟", callback_data="selectlang"
             )
         ],
     )
@@ -444,7 +444,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             btn.insert(
                 0,
                 [
-                    InlineKeyboardButton(f'♻️ ɪɴꜰᴏ', 'info'),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
                     InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'tips'),
                 ],
@@ -454,7 +454,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             btn.insert(
                 0,
                 [
-                    InlineKeyboardButton(f'♻️ ɪɴꜰᴏ', 'info'),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
                     InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'tips'),
                 ],
@@ -468,7 +468,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             btn.insert(
                 0,
                 [
-                    InlineKeyboardButton(f'♻️ ɪɴꜰᴏ', 'info'),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
                     InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'tips'),
                 ],
@@ -478,7 +478,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             btn.insert(
                 0,
                 [
-                    InlineKeyboardButton(f'♻️ ɪɴꜰᴏ', 'info'),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
                     InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'tips'),
                 ],
