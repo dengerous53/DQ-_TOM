@@ -3,7 +3,6 @@ import random
 import asyncio
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums
-from info import DLT_TIME
 from Script import script
 
 CMD = ["/", "."]
