@@ -2553,6 +2553,7 @@ async def auto_filter(client, msg, spoll=False):
             ]
 
     try:
+        key = f"{message.chat.id}-{message.id}"
         if settings['auto_delete']:
             btn.insert(0, 
                 [
