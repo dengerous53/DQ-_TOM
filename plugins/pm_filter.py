@@ -357,7 +357,6 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     _, lang, search, key = query.data.split("#")
 
     search = search.replace("_", " ")
-    key = f"{message.chat.id}-{message.id}"
     req = query.from_user.id
     chat_id = query.message.chat.id
     message = query.message
@@ -368,7 +367,6 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
 
     search = f"{search} {lang}" 
-    key = f"{message.chat.id}-{message.id}"
     
     files, _, _ = await get_search_results(chat_id, search, max_results=10)
     files = [file for file in files if re.search(lang, file.file_name, re.IGNORECASE)]
@@ -483,7 +481,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             )
 
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Fɪʟᴇs Tᴏ PM !", callback_data=f"send_fall#files#{offset}")
+        InlineKeyboardButton("! PM !", url="t.me/TGxMULTIBOT")
     ])
     offset = 0
 
