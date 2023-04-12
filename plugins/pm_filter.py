@@ -357,6 +357,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     _, lang, search, key = query.data.split("#")
 
     search = search.replace("_", " ")
+    key = f"{message.chat.id}-{message.id}"
     req = query.from_user.id
     chat_id = query.message.chat.id
     message = query.message
