@@ -160,7 +160,7 @@ async def next_page(bot, query):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
@@ -172,7 +172,7 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}")
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
@@ -180,7 +180,7 @@ async def next_page(bot, query):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{key}#{offset}"),
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}")
                     InlineKeyboardButton("sᴇʟᴇᴄᴛ​", callback_data="ooooo")
                 ]
             )
