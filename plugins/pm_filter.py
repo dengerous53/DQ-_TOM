@@ -1272,7 +1272,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(text=script.TAMIL_TXT, show_alert=True)
         
     elif query.data == "imdb1":
-        await query.answer(text=script.IMDB_TEMPLATE_TXT, show_alert=True)
+        await query.answer(f"Title {title}", show_alert=True)
 
     elif query.data == "start":
         buttons = [[
