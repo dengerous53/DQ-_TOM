@@ -273,7 +273,8 @@ async def next_page(bot, query):
                     ],
                 )
     btn.insert(0, [
-        InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+#        InlineKeyboardButton("⭕️ ʟᴀɴɢᴜᴀɢᴇs ⭕️", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+        InlineKeyboardButton(f"🔍 {search} 🔎", callback_data="imdb1")
     ])
     try:
         await query.edit_message_reply_markup(
@@ -1269,6 +1270,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "tamil":
         await query.answer(text=script.TAMIL_TXT, show_alert=True)
+        
+    elif query.data == "imdb1":
+        await query.answer(text=script.IMDB_TEMPLATE_TXT, show_alert=True)
 
     elif query.data == "start":
         buttons = [[
