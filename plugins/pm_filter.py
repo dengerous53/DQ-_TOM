@@ -64,7 +64,9 @@ async def invite(client, message):
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     userid = message.reply_to_message.from_user.id
-    content = message.text                               
+    content = message.text
+    if int(userid) not in [message.from_user.id, 0]:
+        return await query.answer("This Is Not For You!", show_alert=True)                              
     if LOGIN_CHANNEL and not await mute_login(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))          
