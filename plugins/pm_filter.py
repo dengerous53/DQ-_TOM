@@ -41,7 +41,7 @@ SPELL_CHECK = {}
 
 
 
-@Client.on_message(filters.group & filters.media)
+@Client.on_message(filters.group & filters.text & filters.media & filters.regex("@")
 async def invite(client, message):
     content = message.text
     invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))
