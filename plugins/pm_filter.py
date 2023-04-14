@@ -396,7 +396,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
             show_alert=True,
         )
     else:
-        await query.answer(f"𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠.. {lang.lower()}", show_alert=True)
+        await query.answer(f"𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠..", show_alert=True)
     
     _, search, key = query.data.split("#")
     
