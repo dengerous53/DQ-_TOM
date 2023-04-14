@@ -63,7 +63,7 @@ async def invite(client, message):
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML
     )
-    await asyncio.sleep(5)
+    await asyncio.sleep(60)
     await k.delete()
     await message.delete()
 
