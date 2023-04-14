@@ -69,7 +69,7 @@ async def invite(client, message):
 
 
 
-@Client.on_message(filters.group & filters.incoming)
+@Client.on_message(filters.group & filters.text & filters.media & filters.incoming)
 async def give_filter(client, message):    
     content = message.text                              
     if LOGIN_CHANNEL and not await mute_login(client, message):
@@ -400,6 +400,7 @@ async def advantage_spoll_choker(bot, query):
                 k = (movie, files, offset, total_results)
                 await auto_filter(bot, query, k)
             else:
+                await query.answer(𝐃𝐨𝐧𝐞✔️✔️✔️, show_alert=True)
                 reqstr1 = query.from_user.id if query.from_user else 0
                 reqstr = await bot.get_users(reqstr1)
                 if NO_RESULTS_MSG:
