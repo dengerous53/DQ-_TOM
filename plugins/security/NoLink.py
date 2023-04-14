@@ -43,25 +43,7 @@ Bot = Client(
       
 
 
-@Client.on_message((filters.regex("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")) & filters.group & filters.incoming)
-async def nolink(bot,message):
-        
-	try:
-                 
-                buttons = [[
-                    InlineKeyboardButton('sᴜʀᴘʀɪsᴇ', url='https://t.me/nasrani_update')
-                ]]
-                reply_markup = InlineKeyboardMarkup(buttons)
-                k = await message.reply_sticker("CAACAgUAAx0CXPjPGAACAmVkAAHLpxQlUkQIctGPhN_l36xk9psAAlcJAAKTvwlU-kg3cws4x6geBA") 
-                await asyncio.sleep(2)      
-                k = await k.delete()
-                await message.delete()
-                return
-                
 
-
-	except:
-		return
         
 
 
@@ -70,7 +52,7 @@ async def nolink(bot,message):
 
 
 
-@Client.on_message((filters.regex("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")) & filters.group & filters.incoming)
+@Client.on_message((filters.group) & filters.regex("@")  | filters.regex("t.me") & filters.group & filters.incoming)
 async def channel_tag(bot, message):
     try:
         chat_id = message.chat.id
