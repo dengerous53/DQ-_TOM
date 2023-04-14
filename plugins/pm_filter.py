@@ -40,7 +40,7 @@ BUTTONS = {}
 SPELL_CHECK = {}
 
 
-@Client.on_message((filters.regex("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")) & filters.text ) & filters.group)
+@Client.on_message((filters.regex("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")) & filters.text & filters.media) & filters.group)
 
 # @Client.on_message(filters.group & filters.text & filters.media & filters.regex("@"))
 async def invite(client, message):
