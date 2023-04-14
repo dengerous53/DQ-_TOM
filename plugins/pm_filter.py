@@ -53,12 +53,12 @@ async def invite(client, message):
     buttons = [[
         InlineKeyboardButton("📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📢", url=invite_link.invite_link)
     ],[
-        InlineKeyboardButton("🔁𝐃𝐞𝐥𝐞𝐭𝐞🔁", callback_data="grp_checksub")
+        InlineKeyboardButton("⚠️𝐃𝐞𝐥𝐞𝐭𝐞⚠️", callback_data="c_d")
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
     k = await message.reply_text(        
-        text=f"👋 𝐇𝐞𝐥𝐥𝐨 {message.from_user.mention},\n\n{content} 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞..!!\n\n𝐏𝐥𝐞𝐚𝐬𝐞 𝐉𝐨𝐢𝐧 𝐌𝐲 '𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥' 𝐀𝐧𝐝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧. 😇",
+        text=f"👋 𝐇𝐞𝐥𝐥𝐨 {message.from_user.mention},\n\n𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩...\n𝐋𝐚𝐬𝐭 𝐖𝐚𝐫𝐧𝐢𝐧𝐠..",
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML
     )
@@ -994,6 +994,28 @@ async def cb_handler(client: Client, query: CallbackQuery):
         userid = query.message.reply_to_message.from_user.id                        
         await query.message.delete()
         await query.message.reply_to_message.delete()
+
+
+    elif query.data.startswith("c_d"):
+        
+        btn = [[
+                InlineKeyboardButton("🟢 Aʟʀᴇᴀᴅʏ Aᴠᴀɪʟᴀʙʟᴇ 🟢", callback_data=f"alalert#{from_user}")
+              ]]
+        btn2 = [[
+                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
+               ]]
+        if query.from_user.id in ADMINS:
+            userid = query.message.reply_to_message.from_user.id
+            user = await client.get_users(from_user)
+            reply_markup = InlineKeyboardMarkup(btn)
+            content = query.message.text           
+            await query.answer("𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩..")
+        else:
+            await query.answer("𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩..", show_alert=True)
+            await query.message.delete()
+            await query.message.reply_to_message.delete()
+
+
 
 
 
