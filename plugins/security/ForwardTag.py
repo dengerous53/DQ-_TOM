@@ -10,8 +10,8 @@ async def channel_tag(bot, message):
         chat_id = message.chat.id
         forward_msg = await message.copy(chat_id)
         await message.delete()
-        await asyncio.sleep(5)
+        await asyncio.sleep(1)
         await forward_msg.delete()
-        await message.delete()
+        
     except:
         await message.reply_text("Oops , Recheck My Admin Permissions & Try Again")
