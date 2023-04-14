@@ -2610,22 +2610,20 @@ async def auto_filter(client, msg, spoll=False):
             ]
 
     try:
-        key = f"{message.chat.id}-{message.id}"
-        BUTTONS[key] = search
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'𝐅𝐢𝐥𝐞𝐬: {total_results}', 'dupe'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'{search}', 'imdb')
+                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
+
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'𝐅𝐢𝐥𝐞𝐬: {total_results}', 'dupe'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'{search}', 'imdb')
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
                 
@@ -2636,31 +2634,27 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'𝐅𝐢𝐥𝐞𝐬: {total_results}', 'dupe'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'{search}', 'imdb')
+                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'𝐅𝐢𝐥𝐞𝐬: {total_results}', 'dupe'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'{search}', 'imdb')
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
                 ]
-            )    
+            )
+
     btn.insert(0, [
-        InlineKeyboardButton("ꜱᴇɴᴅ ᴀʟʟ", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
-        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", 'dupe')
+        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Fɪʟᴇs Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}")
     ])
-    btn.insert(1, [
-        InlineKeyboardButton(f'🔍 {search} 🔎', 'reqst1')
+
+    btn.insert(0, [
+        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
     ])
-    
-    m=await message.reply_text("🔍") 
-    await asyncio.sleep(1)
-    await m.delete()
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
