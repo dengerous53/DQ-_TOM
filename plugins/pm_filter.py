@@ -69,7 +69,7 @@ async def invite(client, message):
 
 
 
-@Client.on_message(filters.group & filters.text & filters.media & filters.incoming)
+@Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):    
     content = message.text                              
     if LOGIN_CHANNEL and not await mute_login(client, message):
