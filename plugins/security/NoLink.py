@@ -1,10 +1,3 @@
-import pyrogram
-import os
-from pyrogram import Client, filters
-from pyrogram.types import Message, User
-import asyncio
-
-
 import os 
 import pyrogram
 from pyrogram import Client, filters
@@ -43,17 +36,9 @@ Bot = Client(
       
 
 
-
+@Client.on_message((filters.group) & filters.regex("@")  | filters.regex("t.me"))
+async def nolink(bot,message):
         
-
-
-
-
-
-
-
-@Client.on_message(filters.regex("@")  | filters.regex("t.me") & filters.group & filters.incoming)
-async def channel_tag(bot, message):
 	try:
                  
                 buttons = [[
