@@ -12,11 +12,11 @@ import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, SUPPORT_CHAT_ID, CUSTOM_FILE_CAPTION, MSG_ALRT, PICS, AUTH_GROUPS, P_TTI_SHOW_OFF, GRP_LNK, CHNL_LNK, NOR_IMG, LOG_CHANNEL, SPELL_IMG, MAX_B_TN, IMDB, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, NO_RESULTS_MSG, VERIFY
+    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, NO_RESULTS_MSG, VERIFY, CUSTOM_QUERY_CAPTION, IMDB_DLT_TIME, FILE_FORWARD, FILE_CHANNEL, MAIN_CHANNEL, SP, LOGIN_CHANNEL, LANGUAGES, LOGIN_CHANNEL
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
-from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, get_shortlink, send_all, check_verification, get_token
+from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, get_shortlink, send_all, check_verification, get_token, mute_login
 from database.users_chats_db import db
 from database.ia_filterdb import Media, get_file_details, get_search_results, get_bad_files
 from database.filters_mdb import (
@@ -40,6 +40,33 @@ SPELL_CHECK = {}
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
+    content = message.text                               
+    if LOGIN_CHANNEL and not await mute_login(client, message):
+        try:
+            invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))          
+        except ChatAdminRequired:
+            logger.error("Make sure Bot is admin in Forcesub channel")
+            return
+        buttons = [[
+            InlineKeyboardButton("📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📢", url=invite_link.invite_link)
+        ],[
+            InlineKeyboardButton("🔁 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data="grp_checksub")
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        k = await message.reply_photo(
+            photo=random.choice(SP),
+            caption=f"👋 𝐇𝐞𝐥𝐥𝐨 {message.from_user.mention},\n\n{content} 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞..!!\n\n𝐏𝐥𝐞𝐚𝐬𝐞 𝐉𝐨𝐢𝐧 𝐌𝐲 '𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥' 𝐀𝐧𝐝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧. 😇",
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+        await asyncio.sleep(300)
+        await k.delete()               
+        try:
+            await message.delete()
+        except:
+            pass
+        return
     if message.chat.id != SUPPORT_CHAT_ID:
         glob = await global_filters(client, message)
         if glob == False:
@@ -55,6 +82,10 @@ async def give_filter(client, message):
                     settings = await get_settings(message.chat.id)
                     if settings['auto_ffilter']:
                         await auto_filter(client, message)
+                else:
+                    k = await message.reply_text(f"𝐇𝐞𝐥𝐥𝐨 {message.from_user.mention},\n\n{content} 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞..!! \n\n❌️𝐀𝐮𝐭𝐨 𝐅𝐢𝐥𝐭𝐞𝐫 𝐎𝐟𝐟..!!!❌️ \n𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭..")
+                    await asyncio.sleep(5)
+                    await k.delete()
 
 
 
