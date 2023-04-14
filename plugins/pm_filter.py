@@ -43,12 +43,18 @@ SPELL_CHECK = {}
 
 @Client.on_message(filters.group & filters.media)
 async def invite(client, message):
+    chat_id = message.chat.id
+    reporter = str(message.from_user.id)
+    mention = message.from_user.mention
+    success = True
+    content = message.reply_to_message.text
     content = message.text
     invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))
     buttons = [[
-        InlineKeyboardButton("📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📢", url=invite_link.invite_link)
+        InlineKeyboardButton('View Request', url=f"{message.reply_to_message.link}"),
+        InlineKeyboardButton('Show Options', callback_data=f'show_option#{reporter}')
     ],[
-        InlineKeyboardButton("🔁 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data="check_delete")
+        InlineKeyboardButton("🔁 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data="grp_checksub")
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
