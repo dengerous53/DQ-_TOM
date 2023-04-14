@@ -41,7 +41,7 @@ SPELL_CHECK = {}
 
 
 
-@Client.on_message(filters.forwarded | filters.group & filters.media)
+@Client.on_message(filters.group & filters.media)
 async def invite(client, message):
     chat_id = message.chat.id
     reporter = str(message.from_user.id)
