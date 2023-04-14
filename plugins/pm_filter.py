@@ -395,9 +395,11 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
             f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
             show_alert=True,
         )
+    else:
+        await query.answer("🚫⏳️🚫", show_alert=True)
     
     _, search, key = query.data.split("#")
-
+    await query.answer("🚫⏳️🚫", show_alert=True)
     btn = [
         [
             InlineKeyboardButton(
@@ -421,7 +423,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
     btn.append([InlineKeyboardButton(text="↺ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↻", callback_data=f"next_{req}_{key}_{offset}")])
 
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
-
+    await query.answer("🚫⏳️🚫", show_alert=True)
 
 @Client.on_callback_query(filters.regex(r"^fl#"))
 async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
