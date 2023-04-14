@@ -383,6 +383,7 @@ async def advantage_spoll_choker(bot, query):
                 k = await query.message.edit(script.MVE_NT_FND)
                 await asyncio.sleep(10)
                 await k.delete()
+                return   
                 await query.answer("𝐖𝐚𝐢𝐭𝐢𝐧𝐠 𝐒𝐞𝐞..🍿", show_alert=True)
                 await query.message.delete()
 
