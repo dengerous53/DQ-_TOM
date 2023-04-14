@@ -61,6 +61,28 @@ async def invite(client, message):
     await k.delete()
     await message.delete()
 
+
+@Client.on_message(filters.group & filters.text & filters.media | filters.forwarded)
+async def invite(client, message):
+    content = message.text
+    invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))
+    buttons = [[
+        InlineKeyboardButton("📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📢", url=invite_link.invite_link)
+    ],[
+        InlineKeyboardButton("🔁 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data="grp_checksub")
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    
+    k = await message.reply_text(        
+        text=f"👋 𝐇𝐞𝐥𝐥𝐨 {message.from_user.mention},\n\n{content} 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞..!!\n\n𝐏𝐥𝐞𝐚𝐬𝐞 𝐉𝐨𝐢𝐧 𝐌𝐲 '𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥' 𝐀𝐧𝐝 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧. 😇",
+        reply_markup=reply_markup,
+        parse_mode=enums.ParseMode.HTML
+    )
+    await asyncio.sleep(5)
+    await k.delete()
+    await message.delete()
+
+
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):    
     content = message.text                              
