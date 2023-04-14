@@ -389,6 +389,7 @@ async def advantage_spoll_choker(bot, query):
         return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
+    await query.answer(f"𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name}, ⚠️𝐂𝐥𝐨𝐬𝐞𝐝⚠️", show_alert=True)   
     movie = movies[(int(movie_))]
     await query.answer(script.TOP_ALRT_MSG)
     gl = await global_filters(bot, query.message, text=movie)
@@ -867,8 +868,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                              ]
                          )
                      )
-                else:
-                    await query.answer(f"𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name}, 𝐆𝐨𝐢𝐧𝐠 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐒𝐞𝐜𝐭𝐢𝐨𝐧...📥", show_alert=True)
+                
                     Joel_tgx = await query.message.reply_text(
                         
                         script.FILE_MSG.format(query.from_user.mention, title, size),
