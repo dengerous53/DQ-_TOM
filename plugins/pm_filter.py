@@ -354,7 +354,7 @@ async def advantage_spoll_choker(bot, query):
     if not movies:
         return await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
     else:      
-        await query.answer(f"⚠️⚠️⚠️", show_alert=True)
+        await query.answer(f"𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠....", show_alert=True)
     
     
     if int(user) != 0 and query.from_user.id != int(user):
@@ -383,9 +383,10 @@ async def advantage_spoll_choker(bot, query):
                 reqstr = await bot.get_users(reqstr1)
                 if NO_RESULTS_MSG:                   
                     await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
-                k = await query.message.edit(script.MVE_NT_FND)
-                await asyncio.sleep(10)
-                await k.delete()
+                 await query.answer("𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
+#                k = await query.message.edit(script.MVE_NT_FND)
+#                await asyncio.sleep(10)
+#                await k.delete()
             
 
 @Client.on_callback_query(filters.regex(r"^languages#"))
