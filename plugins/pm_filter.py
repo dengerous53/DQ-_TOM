@@ -353,16 +353,22 @@ async def advantage_spoll_choker(bot, query):
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
         return await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+    else:      
+        await query.answer(f"⚠️⚠️⚠️", show_alert=True)
+    
     
     if int(user) != 0 and query.from_user.id != int(user):
         return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+    else:      
+        await query.answer(f"⚠️⚠️⚠️", show_alert=True)
+    
     
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     await query.answer(f"𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name}, 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞...⏳️", show_alert=True)   
     movie = movies[(int(movie_))]
     await query.answer(script.TOP_ALRT_MSG)
-    await query.answer("𝐃𝐨𝐧𝐞😞", show_alert=True)
+   
     gl = await global_filters(bot, query.message, text=movie)
     await query.answer("𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
     if gl == False:
@@ -383,9 +389,9 @@ async def advantage_spoll_choker(bot, query):
                 k = await query.message.edit(script.MVE_NT_FND)
                 await asyncio.sleep(10)
                 await k.delete()
-                return   
-                await query.answer("𝐖𝐚𝐢𝐭𝐢𝐧𝐠 𝐒𝐞𝐞..🍿", show_alert=True)
-                await query.message.delete()
+            else:      
+                await query.answer(f"⏳️{search} {lang.lower()} 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠..⏳️", show_alert=True)
+    
 
 @Client.on_callback_query(filters.regex(r"^languages#"))
 async def languages_cb_handler(client: Client, query: CallbackQuery):
@@ -396,7 +402,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
             show_alert=True,
         )
     else:
-        await query.answer(f"𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠..", show_alert=True)
+        await query.answer(f"𝐋𝐨𝐚𝐝𝐢𝐧𝐠 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞𝐬..", show_alert=True)
     
     _, search, key = query.data.split("#")
     
