@@ -36,7 +36,7 @@ Bot = Client(
       
 
 
-@Client.on_message(filters.regex("@") & filters.group
+@Client.on_message(filters.regex("t.me") & filters.group)
 async def nolink(bot,message):
         
 	try:
