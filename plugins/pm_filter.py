@@ -381,7 +381,9 @@ async def advantage_spoll_choker(bot, query):
                 
                 reqstr1 = query.from_user.id if query.from_user else 0
                 reqstr = await bot.get_users(reqstr1)
-                if NO_RESULTS_MSG:                   
+                if NO_RESULTS_MSG:
+                    await query.answer(f"𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
+                else:              
                     await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
                 await query.answer(f"𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
 #                k = await query.message.edit(script.MVE_NT_FND)
