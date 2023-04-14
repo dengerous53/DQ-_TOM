@@ -2610,20 +2610,23 @@ async def auto_filter(client, msg, spoll=False):
             ]
 
     try:
+        key = f"{message.chat.id}-{message.id}"
+        BUTTONS[key] = search
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'𝐈𝐧𝐟𝐨🔰', 'tips')
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'𝐈𝐧𝐟𝐨🔰', 'tips')
                 ]
             )
                 
@@ -2634,17 +2637,17 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'𝐈𝐧𝐟𝐨🔰', 'tips')
                 ]
             )
-
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+                    InlineKeyboardButton(f'𝐈𝐧𝐟𝐨🔰', 'tips')
                 ]
             )
 
