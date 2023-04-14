@@ -47,7 +47,7 @@ async def invite(client, message):
     reporter = str(message.from_user.id)
     mention = message.from_user.mention
     success = True
-    content = message.reply_to_message.text
+    content = message.reply_to_message
     content = message.text
     invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))
     buttons = [[
