@@ -354,7 +354,7 @@ async def advantage_spoll_choker(bot, query):
     if not movies:
         return await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
     else:      
-        await query.answer(f"𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠....", show_alert=True)
+        await query.answer(f"⚠️{movie}⚠️", show_alert=True)
     
     
     if int(user) != 0 and query.from_user.id != int(user):
@@ -363,12 +363,11 @@ async def advantage_spoll_choker(bot, query):
     
     if movie_ == "close_spellcheck":
         return await query.message.delete()
-    await query.answer(f"𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name}, 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞...⏳️", show_alert=True)   
-    movie = movies[(int(movie_))]
+    await query.answer(f"⏳️𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name}, 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞...⏳️", show_alert=True)   
+    movie = movies[(int(movie_))]    
     await query.answer(script.TOP_ALRT_MSG)
    
-    gl = await global_filters(bot, query.message, text=movie)
-    await query.answer("𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
+    gl = await global_filters(bot, query.message, text=movie)   
     if gl == False:
         k = await manual_filters(bot, query.message, text=movie)
         
@@ -384,7 +383,7 @@ async def advantage_spoll_choker(bot, query):
                 if NO_RESULTS_MSG:
                     await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
                 
-                k = await query.message.edit(f"𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name} {movie} 𝐦𝐨𝐯𝐢𝐞 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐢𝐧 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞")
+                k = await query.message.edit(f"⚠️𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name} {movie} 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐢𝐧 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞⚠️")
                 await asyncio.sleep(10)
                 await k.delete()
             
