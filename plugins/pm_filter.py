@@ -572,12 +572,6 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 callback_data=f"next_{req}_{key}_{offset}"
                 ),
         ])
-    btn.append(        [
-            InlineKeyboardButton(
-                text="⚠️ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ⚠️",
-                callback_data=f"fl"
-                ),
-        ])
     
     
 
@@ -589,7 +583,11 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.data == "close_data":
+        userid = query.message.reply_to_message.from_user.id                        
         await query.message.delete()
+        await query.message.reply_to_message.delete()
+
+
     elif query.data == "gfiltersdeleteallconfirm":
         await del_allg(query.message, 'gfilters')
         await query.answer("Dᴏɴᴇ !")
@@ -2849,7 +2847,7 @@ async def advantage_spell_chok(client, msg):
         ]
         for k, movie_name in enumerate(movielist)
     ]
-    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spol#{reqstr1}#close_spellcheck')])
+    btn.append([InlineKeyboardButton(text="Close", callback_data='close_data')])
     spell_check_del = await msg.reply_photo(
         photo=(SPELL_IMG),
         caption=(script.CUDNT_FND.format(mv_rqst)),
