@@ -50,8 +50,7 @@ async def invite(client, message):
     content = message.reply_to_message
     content = message.text
     invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))
-    buttons = [[
-        InlineKeyboardButton('View Request', url=f"{message.reply_to_message.link}"),
+    buttons = [[        
         InlineKeyboardButton('Show Options', callback_data=f'show_option#{reporter}')
     ],[
         InlineKeyboardButton("🔁 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data="grp_checksub")
