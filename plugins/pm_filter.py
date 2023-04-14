@@ -1005,10 +1005,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 
     elif query.data.startswith("check_delete"):
-        userid = query.message.reply_to_message.from_user.id
-        if int(userid) not in [query.from_user.id, 0]:         
-            await query.answer("Please join first my Updates Channel", show_alert=True)
-            return                
+        userid = query.message.reply_to_message.from_user.id                        
         await query.message.delete()
         await query.message.reply_to_message.delete()
 
