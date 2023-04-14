@@ -353,7 +353,7 @@ async def advantage_spoll_choker(bot, query):
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
         return await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
-    await query.message.delete()
+    
     if int(user) != 0 and query.from_user.id != int(user):
         return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
     
@@ -367,14 +367,14 @@ async def advantage_spoll_choker(bot, query):
     await query.answer("𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
     if gl == False:
         k = await manual_filters(bot, query.message, text=movie)
-        await query.answer("𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
+        
         if k == False:
             files, offset, total_results = await get_search_results(query.message.chat.id, movie, offset=0, filter=True)
             if files:
                 k = (movie, files, offset, total_results)
                 await auto_filter(bot, query, k)
             else:
-                await query.answer("𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
+                
                 reqstr1 = query.from_user.id if query.from_user else 0
                 reqstr = await bot.get_users(reqstr1)
                 if NO_RESULTS_MSG:
@@ -383,7 +383,8 @@ async def advantage_spoll_choker(bot, query):
                 k = await query.message.edit(script.MVE_NT_FND)
                 await asyncio.sleep(10)
                 await k.delete()
-
+            else:
+                await query.answer("𝐖𝐚𝐢𝐭𝐢𝐧𝐠 𝐒𝐞𝐞..🍿", show_alert=True)
 
 @Client.on_callback_query(filters.regex(r"^languages#"))
 async def languages_cb_handler(client: Client, query: CallbackQuery):
