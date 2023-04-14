@@ -40,9 +40,8 @@ BUTTONS = {}
 SPELL_CHECK = {}
 
 
-@Client.on_message((filters.regex("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$") & filters.text & filters.media) & filters.group)
 
-# @Client.on_message(filters.group & filters.text & filters.media & filters.regex("@"))
+@Client.on_message(filters.group & filters.text & filters.media | filters.forwarded)
 async def invite(client, message):
     content = message.text
     invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))
@@ -58,7 +57,7 @@ async def invite(client, message):
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML
     )
-    await asyncio.sleep(30)
+    await asyncio.sleep(5)
     await k.delete()
     await message.delete()
 
