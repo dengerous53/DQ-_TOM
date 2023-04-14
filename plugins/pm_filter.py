@@ -996,14 +996,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.reply_to_message.delete()
 
 
-    elif query.data.startswith("c_d"):
-        
-        btn = [[
-                InlineKeyboardButton("🟢 Aʟʀᴇᴀᴅʏ Aᴠᴀɪʟᴀʙʟᴇ 🟢", callback_data=f"alalert#{from_user}")
-              ]]
-        btn2 = [[
-                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
-               ]]
+    elif query.data.startswith("c_d"):                
         if query.from_user.id in ADMINS:
             userid = query.message.reply_to_message.from_user.id
             user = await client.get_users(from_user)
