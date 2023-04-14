@@ -41,7 +41,7 @@ SPELL_CHECK = {}
 
 
 
-@Client.on_message(filters.group & filters.media)
+@Client.on_message(filters.forwarded | filters.group & filters.media)
 async def invite(client, message):
     chat_id = message.chat.id
     reporter = str(message.from_user.id)
@@ -50,10 +50,10 @@ async def invite(client, message):
     content = message.reply_to_message
     content = message.text
     invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))
-    buttons = [[        
-        InlineKeyboardButton('Show Options', callback_data=f'show_option#{reporter}')
+    buttons = [[
+        InlineKeyboardButton("📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📢", url=invite_link.invite_link)
     ],[
-        InlineKeyboardButton("🔁 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data="grp_checksub")
+        InlineKeyboardButton("🔁𝐃𝐞𝐥𝐞𝐭𝐞🔁", callback_data="grp_checksub")
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
