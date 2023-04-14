@@ -997,16 +997,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 
     elif query.data.startswith("c_d"):                
+        btn = [[
+            InlineKeyboardButton("𝐃𝐞𝐥𝐞𝐭𝐞", callback_data="check_delete")
+        ]]        
         if query.from_user.id in ADMINS:
-            userid = query.message.reply_to_message.from_user.id
             user = await client.get_users(from_user)
             reply_markup = InlineKeyboardMarkup(btn)
-            content = query.message.text           
-            await query.answer("𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩..")
+            content = query.message.text
+            await query.message.edit_text(f"<b><strike>𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩</strike></b>")
+            await query.message.edit_reply_markup(reply_markup)
+            await query.answer("𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩")
+            try:
+                await client.send_message(chat_id=int(from_user), text="𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩", reply_markup=InlineKeyboardMarkup(btn2))
+            except UserIsBlocked:
+                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text="𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩", reply_markup=InlineKeyboardMarkup(btn2))
         else:
-            await query.answer("𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩..", show_alert=True)
-            await query.message.delete()
-            await query.message.reply_to_message.delete()
+            await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢʜᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
 
 
 
