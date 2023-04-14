@@ -353,7 +353,7 @@ async def advantage_spoll_choker(bot, query):
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
         return await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
-    await query.message.reply_text(f"sorry")
+    await query.message.delete()
     if int(user) != 0 and query.from_user.id != int(user):
         return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
     
@@ -362,11 +362,12 @@ async def advantage_spoll_choker(bot, query):
     await query.answer(f"𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name}, 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞...⏳️", show_alert=True)   
     movie = movies[(int(movie_))]
     await query.answer(script.TOP_ALRT_MSG)
+    await query.answer("𝐃𝐨𝐧𝐞😞", show_alert=True)
     gl = await global_filters(bot, query.message, text=movie)
-#    await query.answer("𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
+    await query.answer("𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
     if gl == False:
         k = await manual_filters(bot, query.message, text=movie)
-#        await query.answer("𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
+        await query.answer("𝐃𝐨𝐧𝐞✔️✔️✔️", show_alert=True)
         if k == False:
             files, offset, total_results = await get_search_results(query.message.chat.id, movie, offset=0, filter=True)
             if files:
