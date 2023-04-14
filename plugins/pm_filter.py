@@ -867,6 +867,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                              ]
                          )
                      )
+                else:
                     await query.answer(f"𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name}, 𝐆𝐨𝐢𝐧𝐠 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐒𝐞𝐜𝐭𝐢𝐨𝐧...📥", show_alert=True)
                     Joel_tgx = await query.message.reply_text(
                         
@@ -886,7 +887,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         await asyncio.sleep(600)
                         await Joel_tgx.delete()
                         await file_send.delete()
-
+               
                     k = await client.send_message(
                         chat_id=FILE_CHANNEL,                        
                         text=script.DONE_MSG.format(query.from_user.mention, title, size),
