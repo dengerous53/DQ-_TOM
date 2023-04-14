@@ -1001,8 +1001,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         btn = [[
             InlineKeyboardButton("𝐃𝐞𝐥𝐞𝐭𝐞", callback_data="check_delete")
         ]]        
-        if query.from_user.id in ADMINS:
-            mention = query.from.user_mention         
+        if query.from_user.id in ADMINS:                     
             user = ADMINS
             reply_markup = InlineKeyboardMarkup(btn)
             content = query.message.text
@@ -1014,7 +1013,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             except UserIsBlocked:
                 await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text="𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩", reply_markup=InlineKeyboardMarkup(btn))
         else:
-            await query.answer(f"𝐇𝐞𝐥𝐥𝐨 {mention} 𝐓𝐡𝐢𝐬 𝐀𝐝𝐦𝐢𝐧 𝐎𝐧𝐥𝐲..!!!⚠️", show_alert=True)
+            await query.answer(f"𝐇𝐞𝐥𝐥𝐨 {query.from_user.mention} 𝐓𝐡𝐢𝐬 𝐀𝐝𝐦𝐢𝐧 𝐎𝐧𝐥𝐲..!!!⚠️", show_alert=True)
 
 
 
