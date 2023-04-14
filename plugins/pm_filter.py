@@ -586,7 +586,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         userid = query.message.reply_to_message.from_user.id                               
         await query.message.delete()
         await query.message.reply_to_message.delete()
-    else:
         await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True)
 
     elif query.data == "gfiltersdeleteallconfirm":
