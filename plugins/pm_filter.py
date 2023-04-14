@@ -996,11 +996,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.reply_to_message.delete()
 
 
-    elif query.data.startswith("c_d"):                
+    elif query.data.startswith("c_d"):
+        ident, from_user = query.data.split("#")               
         btn = [[
             InlineKeyboardButton("𝐃𝐞𝐥𝐞𝐭𝐞", callback_data="check_delete")
         ]]        
-        if query.from_user.id in ADMINS:
+        if query.from_user.id in ADMINS:           
             user = await client.get_users(from_user)
             reply_markup = InlineKeyboardMarkup(btn)
             content = query.message.text
