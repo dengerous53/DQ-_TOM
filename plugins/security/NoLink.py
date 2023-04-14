@@ -52,7 +52,7 @@ Bot = Client(
 
 
 
-@Client.on_message((filters.group) & filters.regex("@")  | filters.regex("t.me") & filters.group & filters.incoming)
+@Client.on_message(filters.regex("@")  | filters.regex("t.me") & filters.group & filters.incoming)
 async def channel_tag(bot, message):
 	try:
                  
