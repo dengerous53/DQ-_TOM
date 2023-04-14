@@ -439,8 +439,9 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             show_alert=True,
         )
     else:
-        await query.answer(f"⏳️{search} {lang.lower()} 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠..⏳️", show_alert=True)
         return
+        await query.answer(f"⏳️{search} {lang.lower()} 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠..⏳️", show_alert=True)
+        
     search = f"{search} {lang}" 
     
     files, offset, _ = await get_search_results(chat_id, search, max_results=10)
