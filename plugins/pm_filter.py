@@ -350,6 +350,7 @@ async def next_page(bot, query):
 @Client.on_callback_query(filters.regex(r"^spol"))
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
+    movie = movies[(int(movie_))]    
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
         return await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
@@ -570,6 +571,12 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton(
                 text="↺ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↻",
                 callback_data=f"next_{req}_{key}_{offset}"
+                ),
+        ])
+    btn.append(        [
+            InlineKeyboardButton(
+                text="⚠️ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ⚠️",
+                callback_data=f"next_{req}_{key}"
                 ),
         ])
     
