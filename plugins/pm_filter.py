@@ -438,10 +438,10 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
             show_alert=True,
         )
-    else:
-        return
+    else:      
         await query.answer(f"⏳️{search} {lang.lower()} 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠..⏳️", show_alert=True)
-        
+    if NO_RESULTS_MSG:
+        await query.answer("🚫 𝗡𝗼 𝗙𝗶𝗹𝗲 𝗪𝗲𝗿𝗲 𝗙𝗼𝘂𝗻𝗱 🚫", show_alert=1)
     search = f"{search} {lang}" 
     
     files, offset, _ = await get_search_results(chat_id, search, max_results=10)
