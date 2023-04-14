@@ -54,12 +54,23 @@ Bot = Client(
 
 @Client.on_message((filters.group) & filters.regex("@")  | filters.regex("t.me") & filters.group & filters.incoming)
 async def channel_tag(bot, message):
-    try:
-        chat_id = message.chat.id
-        forward_msg = await message.copy(chat_id)
-        await message.delete()
-        await asyncio.sleep(1)
-        await forward_msg.delete()
+	try:
+                 
+                buttons = [[
+                    InlineKeyboardButton('sᴜʀᴘʀɪsᴇ', url='https://t.me/nasrani_update')
+                ]]
+                reply_markup = InlineKeyboardMarkup(buttons)
+                k = await message.reply_sticker("CAACAgUAAx0CXPjPGAACAmVkAAHLpxQlUkQIctGPhN_l36xk9psAAlcJAAKTvwlU-kg3cws4x6geBA") 
+                await asyncio.sleep(2)      
+                k = await k.delete()
+                hmm = await message.delete()
+                return
+                
+
+
+	except:
+		return
         
-    except:
-        await message.reply_text("Oops , Recheck My Admin Permissions & Try Again")
+
+
+
