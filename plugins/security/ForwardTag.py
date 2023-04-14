@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, User
 
 
-@Client.on_message(filters.forwarded & filters.channel & filters.incoming)
+@Client.on_message(filters.forwarded & filters.Group & filters.incoming)
 async def channel_tag(bot, message):
     try:
         chat_id = message.chat.id
