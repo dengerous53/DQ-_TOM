@@ -1,20 +1,15 @@
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton 
-# from pyrogram.types import CallbackQuery
 import random
 import os
-from info import SP
 from Script import script
-import os
 from pyrogram import Client, filters, enums
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from info import BR_IMDB_TEMPLATE, PROTECT_CONTENT, AUTH_CHANNEL, BATCH_LINK, ADMINS
-from utils import extract_user, get_file_id, get_poster, last_online
-from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings
-from database.ia_filterdb import Media, get_file_details, get_search_results, get_bad_files
-import time
-from datetime import datetime
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from utils import get_poster
+
+
+
 import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
@@ -60,7 +55,7 @@ START_MESSAGE = """
 
 
 
-@Client.on_message(filters.reply & filters.user(ADMINS))             
+@Client.on_message(filters.reply)             
 async def start_message(client, message):    
     searchh = message.text 
 # @Client.on_message(filters.private & filters.forwarded)
