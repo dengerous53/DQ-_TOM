@@ -3002,7 +3002,7 @@ async def advantage_spell_chok(client, msg):
         text = movie.strip()  # args[2]
         same = False
         if (i % 2) == 0:
-            if len(text) > 1 or len(str(pre_len["text_len"])) > 10:
+            if len(text) > 3 or len(str(pre_len["text_len"])) > 10:
                 same = False
             else:
                 same = True
