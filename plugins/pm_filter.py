@@ -3059,7 +3059,7 @@ async def advantage_spell_chok(client, msg):
 def build_keyboard(buttons):
     keyb = []
     for btn in buttons:
-        if btn[2] and keyb:
+        if btn[1] and keyb:
             keyb[-1].append(InlineKeyboardButton(btn[0], callback_data=btn[1]))
         else:
             keyb.append([InlineKeyboardButton(btn[0], callback_data=btn[1])])
