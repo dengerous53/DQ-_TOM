@@ -3018,23 +3018,21 @@ async def advantage_spell_chok(client, msg):
     btn = build_keyboard(btn)
 
     btn.insert(0, [
-        InlineKeyboardButton("⚜ ɴᴇᴡ ᴍᴏᴠɪᴇs ⚜", url="https://t.me/nasrani_update"),
+        InlineKeyboardButton(text, f"spol#{reqstr1}#{k}"),
         InlineKeyboardButton("🧲 Tᴏʀʀᴇɴᴛ Gʀᴏᴜᴘ", url="https://t.me/NasraniSeries")
     ])
 
     btn.insert(0, [
         InlineKeyboardButton("⚜ Nᴇᴡ Oᴛᴛ Mᴏᴠɪᴇs ⚜", url="https://t.me/bigmoviesworld")
     ])
-    btn.append(
-        [InlineKeyboardButton(text, f"spol#{reqstr1}#{k}")]
-    )
+    
       
 
-    d_msg = await msg.reply_photo(
+    d_msg = await msg.rcaptioneply_photo(
         photo=imdb.get('poster'),
-        caption=f"I Couldn't Find",
+        caption=(script.CUDNT_FND.format(mv_rqst)),
         reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(180)
+    awaicaption=(script.CUDNT_FND.format(mv_rqst))
     await d_msg.delete()
     await msg.delete()
 
