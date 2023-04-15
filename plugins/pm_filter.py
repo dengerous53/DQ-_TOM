@@ -1291,20 +1291,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
 
     elif query.data.startswith("un"):
-        ident,  movie_, from_user = query.data.split("#")
+        ident, from_user = query.data.split("#")
         btn = [[            
             InlineKeyboardButton("⚠️𝐔𝐧𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞⚠️", callback_data=f"check_delete")        
         ]]
         if query.from_user.id in ADMINS:
             movies = SPELL_CHECK.get(query.message.reply_to_message.id)
-            movie = movies[(int(movie_))]   
+               
             user = await client.get_users(from_user)
             reply_markup = InlineKeyboardMarkup(btn)
             buttons = [[                        
                 InlineKeyboardButton('📥𝐔𝐏𝐃𝐀𝐓𝐄📥', callback_data=f'check_delete')
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
-            k = await query.message.edit(f"⚠️𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name} {movie} 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐢𝐧 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞⚠️",
+            k = await query.message.edit(f"⚠️𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name} {movies} 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐢𝐧 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞⚠️",
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML)
             await asyncio.sleep(300)
