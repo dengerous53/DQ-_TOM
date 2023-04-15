@@ -411,7 +411,7 @@ async def advantage_spoll_choker(bot, query):
                 if NO_RESULTS_MSG:
                     await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
                 buttons = [[                        
-                    InlineKeyboardButton('𝐔𝐏𝐃𝐀𝐓𝐄', callback_data=f'show_option#{reporter}')
+                    InlineKeyboardButton('𝐔𝐏𝐃𝐀𝐓𝐄', callback_data=f'option')
                 ]]
                 reply_markup = InlineKeyboardMarkup(buttons)
                 k = await query.message.edit(f"⚠️𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name} {movie} 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐢𝐧 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞⚠️",
