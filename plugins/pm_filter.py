@@ -72,13 +72,7 @@ async def give_filter(client, message):
         except:
             pass
         return
-    if LOGIN_CHANNEL is None or SUPPORT_CHAT_ID is None: return # Must add LOGIN_CHANNEL and SUPPORT_CHAT_ID to use this feature
-    if message.reply_to_message and SUPPORT_CHAT_ID == message.chat.id:
-        chat_id = message.chat.id
-        reporter = str(message.from_user.id)
-        mention = message.from_user.mention
-        success = True
-        content = message.reply_to_message.text
+    if message.chat.id != SUPPORT_CHAT_ID:
         glob = await global_filters(client, message)
         if glob == False:
             manual = await manual_filters(client, message)
@@ -98,13 +92,11 @@ async def give_filter(client, message):
                     if settings['auto_ffilter']:
                         await auto_filter(client, message)
                 else:
-                    buttons = [[
-                    InlineKeyboardButton("📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📢", url=f"{message.reply_to_message.link}")
-                    ],[
-                    InlineKeyboardButton("🔁 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data="check_delete")
+                    buttons = [[                    
+                    InlineKeyboardButton("⚠️ 𝐃𝐞𝐥𝐞𝐭𝐞 ⚠️", callback_data="check_delete")
                     ]]
                     reply_markup = InlineKeyboardMarkup(buttons)
-                    k = await message.reply_text(f"𝐔𝐬𝐞𝐫 𝐍𝐚𝐦𝐞: {message.from_user.mention} \n𝐔𝐬𝐞𝐫 𝐈𝐝:{userid} \n𝐂𝐨𝐧𝐭𝐞𝐧𝐭: {content} \n𝐂𝐨𝐧𝐭𝐞𝐧𝐭 𝐋𝐢𝐧𝐤:{invite_link} \n𝐋𝐚𝐬𝐭 𝐖𝐚𝐫𝐧𝐢𝐧𝐠...⚠️")
+                    k = await message.reply_text(f"𝐔𝐬𝐞𝐫 𝐍𝐚𝐦𝐞: {message.from_user.mention} \n𝐔𝐬𝐞𝐫 𝐈𝐝:{userid} \n𝐂𝐨𝐧𝐭𝐞𝐧𝐭: {content} \n𝐂𝐨𝐧𝐭𝐞𝐧𝐭 𝐋𝐢𝐧𝐤:{message.reply_to_message.link} \n𝐋𝐚𝐬𝐭 𝐖𝐚𝐫𝐧𝐢𝐧𝐠...⚠️")
                     await asyncio.sleep(5)
                     await k.delete()  
                     await message.delete()
