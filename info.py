@@ -71,7 +71,7 @@ DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
 
 # Others
-VERIFY = bool(environ.get('VERIFY', False)
+VERIFY = bool(environ.get('VERIFY', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'http://TinyFy.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', '5f301bd41650cf7f64b9e7434fef3b7c973918df')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
