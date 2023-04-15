@@ -1372,13 +1372,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.startswith("close_data"):
         userid = query.message.reply_to_message.from_user.id
-        if int(query.from_user.id) not in [query.from_user.id, 0]:                         
+        if int(query.from_user.id) not in [query.from_user.id, 0]:
+            await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True)                     
+            await query.message.delete()
+            await query.message.reply_to_message.delete()            
+        else:
+            await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True)
             await query.message.delete()
             await query.message.reply_to_message.delete()
-            await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True)
-        else:
-            await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True) 
-        return await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True) 
+#        return await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True) 
 
 
 
