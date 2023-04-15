@@ -401,13 +401,19 @@ async def advantage_spoll_choker(bot, query):
                 k = (movie, files, offset, total_results)
                 await auto_filter(bot, query, k)
             else:
+                chat_id = query.message.chat.id
                 reporter = str(query.message.from_user.id)
+                mention = query.message.from_user.mention
+                success = True
+                content = query.message.text
+                keywords = ["#request", "/request", "#Request", "/Request"]
+                content = content.replace(keyword, "")
                 reqstr1 = query.from_user.id if query.from_user else 0
                 reqstr = await bot.get_users(reqstr1)
                 if NO_RESULTS_MSG:
                     await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
                 buttons = [[                        
-                    InlineKeyboardButton('𝐔𝐏𝐃𝐀𝐓𝐄', callback_data=f'show_option')
+                    InlineKeyboardButton('𝐔𝐏𝐃𝐀𝐓𝐄', callback_data=f'show_option#{reporter}')
                 ]]
                 reply_markup = InlineKeyboardMarkup(buttons)
                 k = await query.message.edit(f"⚠️𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name} {movie} 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐢𝐧 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞⚠️",
