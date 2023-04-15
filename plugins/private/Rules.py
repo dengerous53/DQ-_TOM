@@ -148,5 +148,5 @@ async def start_message(client, message):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
             )
-        except Exception as e:
-            logger.exception(e)
+    except Exception as e:
+        logger.exception(e)
