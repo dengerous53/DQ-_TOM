@@ -72,7 +72,13 @@ async def give_filter(client, message):
         except:
             pass
         return
-    if message.chat.id != SUPPORT_CHAT_ID:
+    if LOGIN_CHANNEL is None or SUPPORT_CHAT_ID is None: return # Must add LOGIN_CHANNEL and SUPPORT_CHAT_ID to use this feature
+    if message.reply_to_message and SUPPORT_CHAT_ID == message.chat.id:
+        chat_id = message.chat.id
+        reporter = str(message.from_user.id)
+        mention = message.from_user.mention
+        success = True
+        content = message.reply_to_message.text
         glob = await global_filters(client, message)
         if glob == False:
             manual = await manual_filters(client, message)
