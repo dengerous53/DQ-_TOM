@@ -3004,17 +3004,19 @@ async def advantage_spell_chok(client, msg):
         for k, movie_name in enumerate(movielist)
     ]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spol#{reqstr1}#close_spellcheck')])
-    buttons = [[
+    btn = [[
         InlineKeyboardButton('𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
     ],[
         InlineKeyboardButton(f'{imdb.get('title')}', callback_data=f"spol#{reqstr1}#{k}"),
         InlineKeyboardButton(f'{imdb.get('year')}', url='https://t.me/bigmoviesworld')
     ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
+    reply_markup = InlineKeyboardMarkup(btn)
     spell_check_del = await msg.reply_photo(
         photo=imdb.get('poster'),
         caption=(script.CUDNT_FND.format(mv_rqst)),
-        reply_markup=InlineKeyboardMarkup(btn)
+        reply_markup=InlineKeyboardMarkup(btn),
+        reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
     )
     try:
         if settings['auto_delete']:
