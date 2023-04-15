@@ -1283,9 +1283,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
             reply_markup = InlineKeyboardMarkup(btn)
-            k = await query.message.edit_text(f"<b><strike>✔️𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝✔️</strike></b>")
+            buttons = [[                        
+                InlineKeyboardButton('❌️𝐃𝐞𝐥𝐞𝐭𝐞❌️', callback_data=f'check_delete')
+            ]]
+            reply_markup = InlineKeyboardMarkup(buttons)
+            k = await query.message.edit_text(f"<b><strike>✔️𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝✔️</strike></b>",
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML)
             await asyncio.sleep(300)
             await k.delete()
+            await query.answer(f"✔️𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝✔️", show_alert=True)
             await query.answer("✔️𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝✔️")
         else:
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
@@ -1295,20 +1302,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
         btn = [[            
             InlineKeyboardButton("⚠️𝐔𝐧𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞⚠️", callback_data=f"check_delete")        
         ]]
-        if query.from_user.id in ADMINS:
-            movies = SPELL_CHECK.get(query.message.reply_to_message.id)
+        if query.from_user.id in ADMINS:            
                
             user = await client.get_users(from_user)
             reply_markup = InlineKeyboardMarkup(btn)
             buttons = [[                        
-                InlineKeyboardButton('📥𝐔𝐏𝐃𝐀𝐓𝐄📥', callback_data=f'check_delete')
+                InlineKeyboardButton('❌️𝐃𝐞𝐥𝐞𝐭𝐞❌️', callback_data=f'check_delete')
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
-            k = await query.message.edit(f"⚠️𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name} {movies} 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐢𝐧 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞⚠️",
+            k = await query.message.edit_text(f"<b><strike>⚠️𝐔𝐧𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞⚠️</strike></b>",
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML)
             await asyncio.sleep(300)
             await k.delete()
+            await query.answer(f"⚠️𝐔𝐧𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞⚠️", show_alert=True)
             await query.answer("⚠️𝐔𝐧𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞⚠️")
         else:
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
@@ -1322,9 +1329,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
             reply_markup = InlineKeyboardMarkup(btn)
-            k = await query.message.edit_text(f"<b><strike>📥𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞📥</strike></b>")
+            buttons = [[                        
+                InlineKeyboardButton('❌️𝐃𝐞𝐥𝐞𝐭𝐞❌️', callback_data=f'check_delete')
+            ]]
+            reply_markup = InlineKeyboardMarkup(buttons)
+            k = await query.message.edit_text(f"<b><strike>📥𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞📥</strike></b>",
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML)
             await asyncio.sleep(300)
             await k.delete()
+            await query.answer(f"📥𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞📥", show_alert=True)
             await query.answer("📥𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞📥")
         else:
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
