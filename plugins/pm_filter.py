@@ -3032,7 +3032,7 @@ async def advantage_spell_chok(client, msg):
 
     d_msg = await msg.reply_photo(
         photo=imdb.get('poster'),
-        text=f"I Couldn't Find",
+        caption=f"I Couldn't Find",
         reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(180)
     await d_msg.delete()
