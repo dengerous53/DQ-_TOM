@@ -1348,7 +1348,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.startswith("alr"):
         ident, from_user = query.data.split("#")
-        content = message.text
+        content = query.message.text
         imdb = await get_poster(content) if IMDB else None
         btn = [[            
             InlineKeyboardButton("📥𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞📥", callback_data=f"check_delete")        
