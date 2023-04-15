@@ -1279,6 +1279,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.startswith("up"):
         ident, from_user = query.data.split("#")
+        
         btn = [[            
             InlineKeyboardButton("✔️𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝✔️", callback_data=f"check_delete")        
         ]]
@@ -1323,7 +1324,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
 
 
-    elif query.data.startswith("alr"):
+    elif query.data.startswith("allr"):
         ident, from_user = query.data.split("#")
         btn = [[            
             InlineKeyboardButton("📥𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞📥", callback_data=f"check_delete")        
@@ -1345,6 +1346,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
         else:
             await query.answer("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ sᴜғғɪᴄɪᴀɴᴛ ʀɪɢᴛs ᴛᴏ ᴅᴏ ᴛʜɪs !", show_alert=True)
 
+    elif query.data.startswith("alr"):
+        ident, from_user = query.data.split("#")
+        content = message.text
+        imdb = await get_poster(content) if IMDB else None
+        btn = [[            
+            InlineKeyboardButton("📥𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞📥", callback_data=f"check_delete")        
+        ]]
+        if query.from_user.id in ADMINS:
+            user = await client.get_users(from_user)
+            reply_markup = InlineKeyboardMarkup(btn)                        
+            await query.answer(f"<b>Query: {content}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={imdb['url']}>{imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>\n🌟 Rating: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10", show_alert=True)
+            await query.answer(f"📥𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞📥", show_alert=True)
+            await query.answer("📥𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞📥")
+        else:
+            await query.answer(f"<b>Query: {content}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={imdb['url']}>{imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>\n🌟 Rating: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10", show_alert=True)
 
 
 
