@@ -89,6 +89,11 @@ async def give_filter(client, message):
                     settings = await get_settings(message.chat.id)
                     if settings['auto_ffilter']:
                         await auto_filter(client, message)
+                else:
+                    k = await message.reply_text(f"𝐇𝐞𝐥𝐥𝐨⚠️⚠️ {message.from_user.mention},\n\n{content} \n❌️.!!!❌️ \⚠️..")
+                    await asyncio.sleep(5)
+                    await k.delete()  
+
                     
 
 
