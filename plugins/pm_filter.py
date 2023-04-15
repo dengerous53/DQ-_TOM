@@ -1296,6 +1296,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("⚠️𝐔𝐧𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞⚠️", callback_data=f"check_delete")        
         ]]
         if query.from_user.id in ADMINS:
+            movie = movies[(int(movie_))]   
             user = await client.get_users(from_user)
             reply_markup = InlineKeyboardMarkup(btn)
             buttons = [[                        
