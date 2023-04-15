@@ -128,8 +128,8 @@ async def pm_text(bot, message):
             reply_markup = InlineKeyboardMarkup(buttons)
             await message.reply_photo(photo=imdb.get('poster'), caption=imdb.get('title'), imdb.get('year'),
             reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-            )
+            parse_mode=enums.ParseMode.HTML)
+            
                                       
     except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
@@ -141,8 +141,8 @@ async def pm_text(bot, message):
             ]]
             hmm = await message.reply_photo(photo=poster, caption=imdb.get('title'), imdb.get('year'),
             reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-            )
+            parse_mode=enums.ParseMode.HTML)
+            
     except Exception as e:
         logger.exception(e)
 
