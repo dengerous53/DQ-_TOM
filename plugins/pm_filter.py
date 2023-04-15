@@ -3021,17 +3021,17 @@ async def advantage_spell_chok(client, msg):
 
         btn.append([text, f"spol#{reqstr1}#{k}", same])
 
-    btn.append(["⚠️𝐂𝐥𝐨𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡⚠️", callback_data="close_data"])
-    btn = build_keyboard(btn)
+#    btn.append(["⚠️𝐂𝐥𝐨𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡⚠️", callback_data="close_data"])
+#    btn = build_keyboard(btn)
 
     btn.insert(0, [
         InlineKeyboardButton("𝐌𝐨𝐯𝐢𝐞𝐬 𝐆𝐫𝐨𝐮𝐩", url="https://t.me/NasraniSeries"),
         InlineKeyboardButton("𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥", url="https://t.me/bigmoviesworld")
     ])
 
-#    btn.insert(0, [
-#        InlineKeyboardButton(f"📥{imdb.get('title')} {imdb.get('year')}📥", f"spol#{reqstr1}#{k}")
-#    ])
+    btn.insert(5, [
+        InlineKeyboardButton(f"⚠️𝐂𝐥𝐨𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡⚠️", callback_data="close_data")
+    ])
     
       
 
