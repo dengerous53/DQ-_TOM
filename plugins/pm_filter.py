@@ -3008,7 +3008,7 @@ async def advantage_spell_chok(client, msg):
     for k, movie in enumerate(movielist):
         text = movie.strip()  # args[2]
         same = False
-        if (i % 2) == 0:
+        if (i % 1) == 0:
             if len(text) > 10 or len(str(pre_len["text_len"])) > 10:
                 same = False
             else:
@@ -3060,9 +3060,9 @@ def build_keyboard(buttons):
     keyb = []
     for btn in buttons:
         if btn[1] and keyb:
-            keyb[-1].append(InlineKeyboardButton(btn[0], callback_data=btn[1]))
-        else:
-            keyb.append([InlineKeyboardButton(btn[0], callback_data=btn[1])])
+            keyb[1].append(InlineKeyboardButton(btn[0], callback_data=btn[1]))
+#        else:
+#            keyb.append([InlineKeyboardButton(btn[0], callback_data=btn[1])])
 
     return keyb
 async def manual_filters(client, message, text=False):
