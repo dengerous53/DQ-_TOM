@@ -638,14 +638,12 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
-    if query.data == "close_data":
+    if query.data == "close":
         userid = query.message.reply_to_message.from_user.id                               
         await query.message.delete()
         await query.message.reply_to_message.delete()
         await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True)
-    else:
-        await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True) 
-
+    
     elif query.data == "gfiltersdeleteallconfirm":
         await del_allg(query.message, 'gfilters')
         await query.answer("Dᴏɴᴇ !")
@@ -1372,6 +1370,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 
 
+    elif query.data.startswith("close_data"):
+        userid = query.message.reply_to_message.from_user.id                               
+        await query.message.delete()
+        await query.message.reply_to_message.delete()
+        await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True)
+    else:
+        await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True) 
 
 
 
