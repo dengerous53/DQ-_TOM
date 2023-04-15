@@ -44,7 +44,7 @@ SPELL_CHECK = {}
 async def media(client, message):
     userid = message.from_user.id        
     buttons = [[     
-        InlineKeyboardButton("📳𝐃𝐞𝐥𝐞𝐭𝐞📳", callback_data="check_delete")
+        InlineKeyboardButton("⚠️𝐖𝐚𝐫𝐧𝐢𝐧𝐠⚠️", callback_data="check_delete")
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
         
@@ -54,7 +54,7 @@ async def media(client, message):
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML
     )
-    await asyncio.sleep(30)
+    await asyncio.sleep(5)
     await k.delete()
     await message.delete()
 
