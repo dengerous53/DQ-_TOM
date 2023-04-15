@@ -3007,15 +3007,7 @@ async def advantage_spell_chok(client, msg):
             same = False
 
         i += 1
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=movie_name.strip(),
-                    callback_data=f"spol#{reqstr1}#{k}",
-                ) 
-            ]
-            for k, movie_name in enumerate(movielist)
-        ]
+        
         btn.append([InlineKeyboardButton(text="Close", callback_data=f'spol#{reqstr1}#close_spellcheck')])
         btn.insert(0, [
             InlineKeyboardButton(f"{imdb.get('poster')}", callback_data=f"spol#{reqstr1}#{k}")
