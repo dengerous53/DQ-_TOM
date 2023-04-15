@@ -1298,7 +1298,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
             reply_markup = InlineKeyboardMarkup(btn)
-            k = await query.message.edit_text(f"<b><strike>⚠️𝐔𝐧𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞⚠️</strike></b>")
+            buttons = [[                        
+                InlineKeyboardButton('📥𝐔𝐏𝐃𝐀𝐓𝐄📥', callback_data=f'check_delete')
+            ]]
+            reply_markup = InlineKeyboardMarkup(buttons)
+            k = await query.message.edit(f"⚠️𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name} {movie} 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐢𝐧 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞⚠️",
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML)
             await asyncio.sleep(300)
             await k.delete()
             await query.answer("⚠️𝐔𝐧𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞⚠️")
