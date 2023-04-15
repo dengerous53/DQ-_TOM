@@ -1377,8 +1377,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True)
     else:
         await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True) 
-
-
+    return await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True) 
 
 
 
