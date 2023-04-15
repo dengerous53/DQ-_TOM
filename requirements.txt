@@ -11,7 +11,6 @@ Heroku3
 search_engine_parser
 wget
 aiofiles
-ffmpeg-python
 ffmpeg
 youtube_search
 youtube-search-python==1.4.6
@@ -31,5 +30,19 @@ pytz
 dnspython
 python-math
 psutil==5.9.4
-Pillow
 speedtest-cli
+
+
+python-dotenv
+openai==0.25.0
+python-telegram-bot==12.8
+pillow==9.5.0
+telegraph
+doodstream
+unshortenit
+mdisky
+### googletrans==4.0.0-rc1 ###
+python-decouple
+ffmpeg-python>=0.2.0
+ytthumb
+YoutubeTags
