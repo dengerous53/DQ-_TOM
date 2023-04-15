@@ -77,7 +77,7 @@ VERIFY = bool(environ.get('VERIFY', False))
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 NO_RESULTS_MSG = bool(environ.get('NO_RESULTS_MSG', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
-MAX_B_TN = environ.get("MAX_B_TN", "7")
+# MAX_B_TN = environ.get("MAX_B_TN", "7")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "False")), False)
 PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/MLZ_BOTZ_SUPPORT')
@@ -111,8 +111,8 @@ FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+A9emw13aEyxkYzE1")
 MSG_ALRT = environ.get('MSG_ALRT', '𝑪𝑯𝑬𝑪𝑲 & 𝑻𝑹𝒀 𝑨𝑳𝑳 𝑴𝒀 𝑭𝑬𝑨𝑻𝑼𝑹𝑬𝑺')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', 0))
 
-# LANGUAGES = ["malayalam", "tamil", "english", "hindi", "telugu", "kannada"]
-LANGUAGES = environ.get("["malayalam", "tamil", "english", "hindi", "telugu", "kannada"]")
+LANGUAGES = ["malayalam", "tamil", "english", "hindi", "telugu", "kannada"]
+MAX_B_TN = ["5", "15", "20"]
 
 # Delete Time
 IMDB_DLT_TIME = int(environ.get('IMDB_DLT_TIME', 600))
