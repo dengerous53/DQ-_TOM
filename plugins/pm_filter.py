@@ -3012,7 +3012,7 @@ async def advantage_spell_chok(client, msg):
 
         i += 1
 
-        btn.append([text, f"spolling#{user}#{k}", same])
+        btn.append([text, f"spol#{reqstr1}#{k}", same])
 
     btn.append(["❌ Close", f'spolling#{user}#close_spellcheck', False])
     btn = build_keyboard(btn)
@@ -3025,7 +3025,7 @@ async def advantage_spell_chok(client, msg):
     btn.insert(0, [
         InlineKeyboardButton("⚜ Nᴇᴡ Oᴛᴛ Mᴏᴠɪᴇs ⚜", url="https://t.me/+uuLR9YwyRjg0ODQ0")
     ])
-    
+    btn.append(["⏳️⏳️⏳️🙂", url="https://t.me/+uuLR9YwyRjg0ODQ0"])
       
 
     d_msg = await msg.reply(f"I Couldn't Find Anything Related To That\n\n"
