@@ -3026,13 +3026,13 @@ async def advantage_spell_chok(client, msg):
     
       
 
-    d_msg = await msg.reply_photo(
+    spell_check_del = await msg.reply_photo(
         photo=imdb.get('poster'),
         caption=(script.CUDNT_FND.format(mv_rqst)),
         reply_markup=InlineKeyboardMarkup(btn))
     awaicaption=(script.CUDNT_FND.format(mv_rqst))
     await asyncio.sleep(60)
-    await d_msg.delete()
+    await spell_check_del.delete()
     await msg.delete()
 
     try:
