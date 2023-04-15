@@ -3014,7 +3014,7 @@ async def advantage_spell_chok(client, msg):
 
         btn.append([text, f"spol#{reqstr1}#{k}", same])
 
-    btn.append(["❌ Close", f'spolling#{reqstr1}#close_spellcheck', False])
+    btn.append(["❌ Close", f'spol#{reqstr1}#close_spellcheck', False])
     btn = build_keyboard(btn)
 
     btn.insert(0, [
@@ -3026,14 +3026,14 @@ async def advantage_spell_chok(client, msg):
         InlineKeyboardButton("⚜ Nᴇᴡ Oᴛᴛ Mᴏᴠɪᴇs ⚜", url="https://t.me/+uuLR9YwyRjg0ODQ0")
     ])
     btn.append(
-        [InlineKeyboardButton(text="♨️𝐍𝐎 𝐌𝐎𝐑𝐄 𝐏𝐀𝐆𝐄𝐒 𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄♨️", callback_data=f"spol#{reqstr1}#{k}")]
+        [InlineKeyboardButton(text=f"{imdb.get('poster')}", callback_data=f"spol#{reqstr1}#{k}")]
     )
       
 
-    d_msg = await msg.reply(f"I Couldn't Find Anything Related To That\n\n"
-                            f"**എന്താണ്‌ മാഷേ, അയക്കും മുമ്പ്‌ കറക്റ്റ്‌ ആണോ ന്ന് ഒന്ന് ചെക്ക്‌ ചെയ്യ്‌.**\n\n"
-                            f"Did You Mean Any One Of These 👇🏻?",
-                            reply_markup=InlineKeyboardMarkup(btn))
+    d_msg = await msg.reply_photo(
+        photo=imdb.get('poster'),
+        text=f"I Couldn't Find",
+        reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(180)
     await d_msg.delete()
     await msg.delete()
