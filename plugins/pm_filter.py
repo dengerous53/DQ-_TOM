@@ -44,7 +44,7 @@ SPELL_CHECK = {}
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     userid = message.from_user.id
-    content = message.reply_to_message.text
+    content = message.reply_to_message
 #    content = message.text                                  
     if LOGIN_CHANNEL and not await mute_login(client, message):
         try:
