@@ -126,10 +126,10 @@ async def pm_text(bot, message):
                 InlineKeyboardButton('𝐋𝐞𝐭𝐞𝐬𝐭 𝐓𝐫𝐲', url=(BATCH_LINK))      
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
-            await message.reply_photo(photo=imdb.get('poster'), caption=imdb.get('title'), imdb.get('year'),
+            await message.reply_photo(photo=imdb.get('poster'), caption=imdb.get('title') imdb.get('year'),
             reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML)
-            
+            parse_mode=enums.ParseMode.HTML
+            )
                                       
     except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
@@ -139,10 +139,10 @@ async def pm_text(bot, message):
                 InlineKeyboardButton("𝐒𝐮𝐫𝐩𝐫𝐢𝐬𝐞", url=f"https://telegram.me/{temp.U_NAME}?start"),
                 InlineKeyboardButton('𝐋𝐞𝐭𝐞𝐬𝐭 𝐓𝐫𝐲', url=(BATCH_LINK))           
             ]]
-            hmm = await message.reply_photo(photo=poster, caption=imdb.get('title'), imdb.get('year'),
+            hmm = await message.reply_photo(photo=poster, caption=imdb.get('title') imdb.get('year'),
             reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML)
-            
+            parse_mode=enums.ParseMode.HTML
+            )
     except Exception as e:
         logger.exception(e)
 
