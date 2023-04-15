@@ -3025,7 +3025,9 @@ async def advantage_spell_chok(client, msg):
     btn.insert(0, [
         InlineKeyboardButton("⚜ Nᴇᴡ Oᴛᴛ Mᴏᴠɪᴇs ⚜", url="https://t.me/+uuLR9YwyRjg0ODQ0")
     ])
-    btn.append(["⏳️⏳️⏳️🙂", url="https://t.me/+uuLR9YwyRjg0ODQ0"])
+    btn.append(
+        [InlineKeyboardButton(text="♨️𝐍𝐎 𝐌𝐎𝐑𝐄 𝐏𝐀𝐆𝐄𝐒 𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄♨️",callback_data="pages")]
+    )
       
 
     d_msg = await msg.reply(f"I Couldn't Find Anything Related To That\n\n"
