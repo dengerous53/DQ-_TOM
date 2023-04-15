@@ -44,8 +44,9 @@ SPELL_CHECK = {}
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     userid = message.from_user.id
-    
-    content = message.text                               
+    content = message.reply_to_message.text
+#    content = message.text 
+    if message.reply_to_message and LOGIN_CHANNEL == message.chat.id:                             
     if LOGIN_CHANNEL and not await mute_login(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))          
@@ -93,7 +94,7 @@ async def give_filter(client, message):
                         await auto_filter(client, message)
                 else:
                     buttons = [[
-                    InlineKeyboardButton("📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📢", url=invite_link.invite_link)
+                    InlineKeyboardButton("📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📢", url=f"{message.reply_to_message.link}")
                     ],[
                     InlineKeyboardButton("🔁 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data="check_delete")
                     ]]
@@ -2840,7 +2841,7 @@ async def advantage_spell_chok(client, msg):
             caption=script.I_CUDNT.format(mv_rqst),
             reply_markup=InlineKeyboardMarkup(button)
         )
-        await asyncio.sleep(30)
+        await asyncio.sleep(10)
         await k.delete()
         return
     movielist = []
@@ -2856,7 +2857,7 @@ async def advantage_spell_chok(client, msg):
             caption=script.I_CUDNT.format(mv_rqst),
             reply_markup=InlineKeyboardMarkup(button)
         )
-        await asyncio.sleep(30)
+        await asyncio.sleep(10)
         await k.delete()
         return
     movielist += [movie.get('title') for movie in movies]
