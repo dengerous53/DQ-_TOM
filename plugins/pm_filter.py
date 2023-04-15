@@ -43,6 +43,8 @@ SPELL_CHECK = {}
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
+    userid = message.reply_to_message.from_user.id
+
     content = message.text                               
     if LOGIN_CHANNEL and not await mute_login(client, message):
         try:
@@ -93,7 +95,7 @@ async def give_filter(client, message):
                     k = await message.reply_text(f"𝐇𝐞𝐥𝐥𝐨⚠️⚠️ {message.from_user.mention},\n\n{content} \n❌️.!!!❌️ \⚠️..")
                     await asyncio.sleep(5)
                     await k.delete()  
-
+                    await message.reply_to_message.delete()
                     
 
 
