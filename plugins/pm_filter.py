@@ -40,7 +40,7 @@ BUTTONS = {}
 SPELL_CHECK = {}
 
 
-@Client.on_message(filters.group & filters.media & filters.incoming)
+@Client.on_message(filters.group & filters.media)
 async def give_filter(client, message):
     userid = message.from_user.id
     media = message.reply_to_message.media
@@ -64,7 +64,7 @@ async def give_filter(client, message):
 
 
 
-@Client.on_message(filters.group & filters.text & filters.incoming)
+@Client.on_message(filters.group & filters.incoming)
 async def give_filter(client, message):
     userid = message.from_user.id
     content = message.reply_to_message
