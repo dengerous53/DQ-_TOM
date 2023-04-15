@@ -3018,7 +3018,7 @@ async def advantage_spell_chok(client, msg):
     btn = build_keyboard(btn)
 
     btn.insert(0, [
-        InlineKeyboardButton(text, f"spol#{reqstr1}#{k}"),
+        InlineKeyboardButton(f"text", f"spol#{reqstr1}#{k}"),
         InlineKeyboardButton("🧲 Tᴏʀʀᴇɴᴛ Gʀᴏᴜᴘ", url="https://t.me/NasraniSeries")
     ])
 
