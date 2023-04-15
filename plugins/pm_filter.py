@@ -3001,38 +3001,26 @@ async def advantage_spell_chok(client, msg):
 #    movielist += [f"{movie.get('title')} {movie.get('year')}" for movie in movies]
     imdb = await get_poster(content) if IMDB else None
     SPELL_CHECK[mv_id] = movielist
-    i = 1
-    pre_len = {}
-    btn = []
-    # movielist.sort(key=len)
-    for k, movie in enumerate(movielist):
-        text = movie.strip()  # args[2]
-        same = False
-        if (i % 2) == 0:
-            if len(text) > 10 or len(str(pre_len["text_len"])) > 10:
-                same = False
-            else:
-                same = True
-        else:
-            pre_len["text_len"] = len(text)
-            same = False
+    btn = [
+        [
+            InlineKeyboardButton(
+                text=movie_name.strip(),
+                callback_data=f"spol#{reqstr1}#{k}",
+            )
+        ]
+        for k, movie_name in enumerate(movielist)
+    ]
+    btn.append([InlineKeyboardButton(text=f"⚠️𝐂𝐥𝐨𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡⚠️", callback_data="close_data")])
 
-        i += 1
-
-        btn.append([text, f"spol#{reqstr1}#{k}", same])
-
-    btn.append(["⚠️𝐂𝐥𝐨𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡⚠️", callback_data="close_data", False])
-    
-    btn = build_keyboard(btn)
-
+#    btn.append([f"⚠️𝐂𝐥𝐨𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡⚠️", callback_data="close_data", False])        
     btn.insert(0, [
         InlineKeyboardButton("𝐌𝐨𝐯𝐢𝐞𝐬 𝐆𝐫𝐨𝐮𝐩", url="https://t.me/NasraniSeries"),
         InlineKeyboardButton("𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥", url="https://t.me/bigmoviesworld")
     ])
 
-    btn.insert(5, [
-        InlineKeyboardButton(f"⚠️𝐂𝐥𝐨𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡⚠️", callback_data="close_data")
-    ])
+#    btn.insert(5, [
+#        InlineKeyboardButton(f"⚠️𝐂𝐥𝐨𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡⚠️", callback_data="close_data")
+#    ])
     
       
 
@@ -3057,15 +3045,7 @@ async def advantage_spell_chok(client, msg):
                 await asyncio.sleep(600)
                 await spell_check_del.delete()
 
-def build_keyboard(buttons):
-    keyb = []
-    for btn in buttons:
-        if btn[-1] and keyb:
-            keyb[2].append(InlineKeyboardButton(btn[0], callback_data=btn[1]))
-        else:
-            keyb.append([InlineKeyboardButton(btn[0], callback_data=btn[1])])
 
-    return keyb
 async def manual_filters(client, message, text=False):
     settings = await get_settings(message.chat.id)
     group_id = message.chat.id
