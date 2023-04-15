@@ -136,7 +136,7 @@ async def start_message(client, message):
             parse_mode=enums.ParseMode.HTML
             )
                                       
-        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
+    except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             buttons = [[
