@@ -123,7 +123,7 @@ async def start_message(client, message):
     user_id = message.from_user.id
     if searchh.startswith("/") or searchh.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins                                  
-    if imdb and imdb.get('poster'):
+    
         try:
             buttons = [[
                 InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/nasrani_update'),
