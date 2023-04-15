@@ -3026,7 +3026,7 @@ async def advantage_spell_chok(client, msg):
         InlineKeyboardButton("⚜ Nᴇᴡ Oᴛᴛ Mᴏᴠɪᴇs ⚜", url="https://t.me/+uuLR9YwyRjg0ODQ0")
     ])
     btn.append(
-        [InlineKeyboardButton(text=f"{imdb.get('poster')}", callback_data=f"spol#{reqstr1}#{k}")]
+        [InlineKeyboardButton(text=f"{imdb.get('title')}", callback_data=f"spol#{reqstr1}#{k}")]
     )
       
 
