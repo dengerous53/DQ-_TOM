@@ -113,7 +113,7 @@ async def pm_text(bot, message):
     
     user = message.from_user.first_name
     user_id = message.from_user.id
-    if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
+    if searchh.startswith("/") or searchh.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
     buttons = [[
         InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/nasrani_update'),
