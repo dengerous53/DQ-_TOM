@@ -106,6 +106,28 @@ async def r_message(client, message):
 #         )
 
 
+@Client.on_message(filters.private & filters.text & filters.incoming)
+async def pm_text(bot, message):
+    searchh = message.text
+    imdb = await get_poster(searchh) if IMDB else None
+    
+    user = message.from_user.first_name
+    user_id = message.from_user.id
+    if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
+    if user_id in ADMINS: return # ignore admins
+    buttons = [[
+        InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/nasrani_update'),
+        InlineKeyboardButton("𝐒𝐮𝐫𝐩𝐫𝐢𝐬𝐞", url=f"https://telegram.me/{temp.U_NAME}?start"),
+        InlineKeyboardButton('𝐋𝐞𝐭𝐞𝐬𝐭 𝐓𝐫𝐲', url=(BATCH_LINK))      
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await message.reply_photo(photo=imdb.get('poster'), caption=cap,
+    reply_markup=reply_markup,
+    parse_mode=enums.ParseMode.HTML
+    )
+
+
+
 
 
 
