@@ -3007,7 +3007,7 @@ async def advantage_spell_chok(client, msg):
     btn = [[
         InlineKeyboardButton('𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
     ],[
-        InlineKeyboardButton(f'{imdb.get('title')}', callback_data=f"spol#{reqstr1}#{k}"),
+        InlineKeyboardButton(f'{imdb.get('title')}', callback_data=f"spol#{reqstr1}#{k}")
         InlineKeyboardButton(f'{imdb.get('year')}', url='https://t.me/bigmoviesworld')
     ]]
     reply_markup = InlineKeyboardMarkup(btn)
