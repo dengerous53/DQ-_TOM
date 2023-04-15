@@ -405,9 +405,7 @@ async def advantage_spoll_choker(bot, query):
                 reporter = str(query.message.from_user.id)
                 mention = query.message.from_user.mention
                 success = True
-                content = query.message.text
-                keywords = ["#request", "/request", "#Request", "/Request"]
-                content = content.replace(keyword, "")
+                content = query.message.text                
                 reqstr1 = query.from_user.id if query.from_user else 0
                 reqstr = await bot.get_users(reqstr1)
                 if NO_RESULTS_MSG:
