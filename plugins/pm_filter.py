@@ -2994,8 +2994,12 @@ async def advantage_spell_chok(client, msg):
     movielist += [f"{movie.get('title')} {movie.get('year')}" for movie in movies]
     imdb = await get_poster(content) if IMDB else None
     SPELL_CHECK[mv_id] = movielist
-    for k, movie_name in enumerate(movielist)
-        text = movie_name.strip()  # args[2]
+    i = 1
+    pre_len = {}
+    btn = []
+    # movielist.sort(key=len)
+    for k, movie in enumerate(movielist):
+        text = movie.strip()  # args[2]
         same = False
         if (i % 2) == 0:
             if len(text) > 10 or len(str(pre_len["text_len"])) > 10:
@@ -3007,30 +3011,52 @@ async def advantage_spell_chok(client, msg):
             same = False
 
         i += 1
-        
-        btn.append([InlineKeyboardButton(text="Close", callback_data=f'spol#{reqstr1}#close_spellcheck')])
-        btn.insert(0, [
-            InlineKeyboardButton(f"{imdb.get('poster')}", callback_data=f"spol#{reqstr1}#{k}")
-        ])
-        reply_markup = InlineKeyboardMarkup(btn)
-        spell_check_del = await msg.reply_photo(
-            photo=imdb.get('poster'),
-            caption=(script.CUDNT_FND.format(mv_rqst)),
-            reply_markup=InlineKeyboardMarkup(btn)                    
-        )
-        try:
+
+        btn.append([text, f"spolling#{user}#{k}", same])
+
+    btn.append(["❌ Close", f'spolling#{user}#close_spellcheck', False])
+    btn = build_keyboard(btn)
+
+    btn.insert(0, [
+        InlineKeyboardButton("⚜ ɴᴇᴡ ᴍᴏᴠɪᴇs ⚜", url="https://t.me/UniversalFilmStudioo"),
+        InlineKeyboardButton("🧲 Tᴏʀʀᴇɴᴛ Gʀᴏᴜᴘ", url="https://t.me/UFSLeechPublic")
+    ])
+
+    btn.insert(0, [
+        InlineKeyboardButton("⚜ Nᴇᴡ Oᴛᴛ Mᴏᴠɪᴇs ⚜", url="https://t.me/+uuLR9YwyRjg0ODQ0")
+    ])
+    
+      
+
+    d_msg = await msg.reply(f"I Couldn't Find Anything Related To That\n\n"
+                            f"**എന്താണ്‌ മാഷേ, അയക്കും മുമ്പ്‌ കറക്റ്റ്‌ ആണോ ന്ന് ഒന്ന് ചെക്ക്‌ ചെയ്യ്‌.**\n\n"
+                            f"Did You Mean Any One Of These 👇🏻?",
+                            reply_markup=InlineKeyboardMarkup(btn))
+    await asyncio.sleep(180)
+    await d_msg.delete()
+    await msg.delete()
+
+    try:
+        if settings['auto_delete']:
+            await asyncio.sleep(600)
+            await spell_check_del.delete()
+    except KeyError:
+            grpid = await active_connection(str(msg.from_user.id))
+            await save_group_settings(grpid, 'auto_delete', True)
+            settings = await get_settings(msg.chat.id)
             if settings['auto_delete']:
                 await asyncio.sleep(600)
                 await spell_check_del.delete()
-        except KeyError:
-                grpid = await active_connection(str(msg.from_user.id))
-                await save_group_settings(grpid, 'auto_delete', True)
-                settings = await get_settings(msg.chat.id)
-                if settings['auto_delete']:
-                    await asyncio.sleep(600)
-                    await spell_check_del.delete()
 
+def build_keyboard(buttons):
+    keyb = []
+    for btn in buttons:
+        if btn[2] and keyb:
+            keyb[-1].append(InlineKeyboardButton(btn[0], callback_data=btn[1]))
+        else:
+            keyb.append([InlineKeyboardButton(btn[0], callback_data=btn[1])])
 
+    return keyb
 async def manual_filters(client, message, text=False):
     settings = await get_settings(message.chat.id)
     group_id = message.chat.id
