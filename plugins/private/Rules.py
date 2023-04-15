@@ -126,7 +126,7 @@ async def pm_text(bot, message):
                 InlineKeyboardButton('𝐋𝐞𝐭𝐞𝐬𝐭 𝐓𝐫𝐲', url=(BATCH_LINK))      
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
-            await message.reply_photo(photo=imdb.get('poster'), caption=imdb.get(['title'], ['year']),
+            await message.reply_photo(photo=imdb.get('poster'), caption=f"<b>Query: {searchh}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={imdb['url']}>{imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>\n🌟 Rating: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10",
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
             )
@@ -139,7 +139,7 @@ async def pm_text(bot, message):
                 InlineKeyboardButton("𝐒𝐮𝐫𝐩𝐫𝐢𝐬𝐞", url=f"https://telegram.me/{temp.U_NAME}?start"),
                 InlineKeyboardButton('𝐋𝐞𝐭𝐞𝐬𝐭 𝐓𝐫𝐲', url=(BATCH_LINK))           
             ]]
-            hmm = await message.reply_photo(photo=poster, caption=imdb.get(['title'], ['year']),
+            hmm = await message.reply_photo(photo=poster, caption=f"<b>Query: {search}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={imdb['url']}>{imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>\n🌟 Rating: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10",
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
             )
