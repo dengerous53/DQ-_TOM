@@ -45,11 +45,10 @@ SPELL_CHECK = {}
 async def give_filter(client, message):
     userid = message.from_user.id
     content = message.reply_to_message.text
-#    content = message.text 
-    if message.reply_to_message and LOGIN_CHANNEL == message.chat.id:                             
-        if LOGIN_CHANNEL and not await mute_login(client, message):
-            try:
-                invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))          
+#    content = message.text                                  
+    if LOGIN_CHANNEL and not await mute_login(client, message):
+        try:
+            invite_link = await client.create_chat_invite_link(int(LOGIN_CHANNEL))          
         except ChatAdminRequired:
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
