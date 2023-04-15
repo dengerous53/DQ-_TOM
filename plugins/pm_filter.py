@@ -43,8 +43,8 @@ SPELL_CHECK = {}
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
-#    userid = message.reply_to_message.from_user.id
-    userid = message.reply_to_message
+    userid = message.from_user.id
+    
     content = message.text                               
     if LOGIN_CHANNEL and not await mute_login(client, message):
         try:
@@ -92,10 +92,16 @@ async def give_filter(client, message):
                     if settings['auto_ffilter']:
                         await auto_filter(client, message)
                 else:
-                    k = await message.reply_text(f"𝐇𝐞𝐥𝐥𝐨⚠️⚠️ {message.from_user.mention},\n\n{content} \n❌️.!!!❌️ \⚠️..")
+                    buttons = [[
+                    InlineKeyboardButton("📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📢", url=invite_link.invite_link)
+                    ],[
+                    InlineKeyboardButton("🔁 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data="check_delete")
+                    ]]
+                    reply_markup = InlineKeyboardMarkup(buttons)
+                    k = await message.reply_text(f"𝐔𝐬𝐞𝐫 𝐍𝐚𝐦𝐞: {message.from_user.mention} \n𝐔𝐬𝐞𝐫 𝐈𝐝:{userid} \n𝐂𝐨𝐧𝐭𝐞𝐧𝐭: {content} \n𝐂𝐨𝐧𝐭𝐞𝐧𝐭 𝐋𝐢𝐧𝐤:{invite_link} \n𝐋𝐚𝐬𝐭 𝐖𝐚𝐫𝐧𝐢𝐧𝐠...⚠️")
                     await asyncio.sleep(5)
                     await k.delete()  
-                    await message.reply_to_message.delete()
+                    await message.delete()
                     
 
 
