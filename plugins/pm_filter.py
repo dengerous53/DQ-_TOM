@@ -104,7 +104,7 @@ async def next_page(bot, query):
         await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name),show_alert=True)
         return
     else:      
-        await query.answer(f"⏳️{offset} {query.from_user.first_name} 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠..⏳️", show_alert=True)
+        await query.answer(f"⏳️𝐇𝐞𝐲 {query.from_user.first_name}, {search} 𝐍𝐞𝐱𝐭 𝐅𝐢𝐥𝐞𝐬 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠..⏳️ \n 𝐅𝐢𝐥𝐞𝐬 {offset}", show_alert=True)
     
 
     files, n_offset, total = await get_search_results(query.message.chat.id, search, offset=offset, filter=True)
