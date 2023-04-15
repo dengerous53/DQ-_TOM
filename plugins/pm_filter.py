@@ -3023,7 +3023,7 @@ async def advantage_spell_chok(client, msg):
     ])
 
     btn.insert(0, [
-        InlineKeyboardButton("⚜ Nᴇᴡ Oᴛᴛ Mᴏᴠɪᴇs ⚜", url="https://t.me/bigmoviesworld")
+        InlineKeyboardButton(f"{imdb.get('title')} {imdb.get('poster')}", f"spol#{reqstr1}#{k}")
     ])
     
       
