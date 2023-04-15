@@ -1311,6 +1311,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             content = query.message.text
             user = await client.get_users(from_user)
             reply_markup = InlineKeyboardMarkup(btn)
+            await query.message.edit_text(f"{user}")
             await query.message.edit_reply_markup(reply_markup)
             await query.answer(f"{content} 📥𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞📥", show_alert=True)
         else:
