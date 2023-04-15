@@ -117,10 +117,8 @@ async def pm_text(bot, message):
     imdb = await get_poster(content) if IMDB else None
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
 #    if user_id in ADMINS: return # ignore admins
-
     
-
-
+    
     try:
             buttons = [[
                 InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/nasrani_update'),
@@ -128,7 +126,7 @@ async def pm_text(bot, message):
                 InlineKeyboardButton('𝐋𝐞𝐭𝐞𝐬𝐭 𝐓𝐫𝐲', url=(BATCH_LINK))      
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
-            await message.reply_photo(photo=imdb.get('poster'), caption=cap,
+            await message.reply_photo(photo=imdb.get('poster'), caption=(BR_IMDB_TEMPLATE),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
             )
@@ -141,7 +139,7 @@ async def pm_text(bot, message):
                 InlineKeyboardButton("𝐒𝐮𝐫𝐩𝐫𝐢𝐬𝐞", url=f"https://telegram.me/{temp.U_NAME}?start"),
                 InlineKeyboardButton('𝐋𝐞𝐭𝐞𝐬𝐭 𝐓𝐫𝐲', url=(BATCH_LINK))           
             ]]
-            hmm = await message.reply_photo(photo=poster, caption=cap,
+            hmm = await message.reply_photo(photo=poster, caption=(BR_IMDB_TEMPLATE),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
             )
