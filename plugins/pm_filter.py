@@ -2995,6 +2995,18 @@ async def advantage_spell_chok(client, msg):
     imdb = await get_poster(content) if IMDB else None
     SPELL_CHECK[mv_id] = movielist
     for k, movie_name in enumerate(movielist)
+        text = movie_name.strip()  # args[2]
+        same = False
+        if (i % 2) == 0:
+            if len(text) > 10 or len(str(pre_len["text_len"])) > 10:
+                same = False
+            else:
+                same = True
+        else:
+            pre_len["text_len"] = len(text)
+            same = False
+
+        i += 1
         btn = [
             [
                 InlineKeyboardButton(
