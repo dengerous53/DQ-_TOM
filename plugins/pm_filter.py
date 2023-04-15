@@ -42,9 +42,7 @@ SPELL_CHECK = {}
 
 @Client.on_message(filters.group & filters.media)
 async def media(client, message):
-    userid = message.from_user.id
-    media = message.reply_to_message.media
-    content = message.text
+    userid = message.from_user.id        
     buttons = [[     
         InlineKeyboardButton("📳𝐃𝐞𝐥𝐞𝐭𝐞📳", callback_data="check_delete")
     ]]
@@ -52,7 +50,7 @@ async def media(client, message):
         
     k = await message.reply_photo(
         photo=random.choice(SP),
-        caption=f"𝐔𝐬𝐞𝐫 𝐍𝐚𝐦𝐞: {message.from_user.mention} \n𝐔𝐬𝐞𝐫 𝐈𝐝:{userid} {media_link}\n\n 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩 𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐘𝐨𝐮𝐫 𝐅𝐢𝐥𝐞𝐬.. 𝐋𝐚𝐬𝐭 𝐖𝐚𝐫𝐧𝐢𝐧𝐠...",
+        caption=f"𝐔𝐬𝐞𝐫 𝐍𝐚𝐦𝐞: {message.from_user.mention} \n𝐔𝐬𝐞𝐫 𝐈𝐝:{userid} \n\n 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩 𝐍𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐘𝐨𝐮𝐫 𝐅𝐢𝐥𝐞𝐬.. 𝐋𝐚𝐬𝐭 𝐖𝐚𝐫𝐧𝐢𝐧𝐠...",
         reply_markup=reply_markup,
         parse_mode=enums.ParseMode.HTML
     )
