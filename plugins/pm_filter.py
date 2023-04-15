@@ -3002,7 +3002,7 @@ async def advantage_spell_chok(client, msg):
         text = movie.strip()  # args[2]
         same = False
         if (i % 2) == 0:
-            if len(text) > 3 or len(str(pre_len["text_len"])) > 10:
+            if len(text) > 10 or len(str(pre_len["text_len"])) > 10:
                 same = False
             else:
                 same = True
@@ -3017,7 +3017,7 @@ async def advantage_spell_chok(client, msg):
     btn.append(["❌ Close", f'spol#{reqstr1}#close_spellcheck', False])
     btn = build_keyboard(btn)
 
-    btn.insert(1, [
+    btn.insert(0, [
         InlineKeyboardButton("𝐌𝐨𝐯𝐢𝐞𝐬 𝐆𝐫𝐨𝐮𝐩", url="https://t.me/NasraniSeries"),
         InlineKeyboardButton("𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥", url="https://t.me/bigmoviesworld")
     ])
