@@ -114,15 +114,73 @@ async def pm_text(bot, message):
     content = message.text
     user = message.from_user.first_name
     user_id = message.from_user.id
+    imdb = await get_poster(content) if IMDB else None
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
 #    if user_id in ADMINS: return # ignore admins
-    await message.reply_text(
-         text="<b>ʜᴇʏ ᴅᴜᴅᴇ 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ᴏɴ ᴏᴜʀ <a href=https://t.me/CinemaKovilakam_Group>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ​👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ​ ", url=f"t.me/at3movies")]]))
-    await bot.send_message(
-        chat_id=LOG_CHANNEL,
-        text=f"<b>👻 𝐏𝐌_𝐌𝐒𝐆 👻\n\n📝ᴍᴇssᴀɢᴇ​:-{content}\n\n👶🏻ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ:-{user}\n\n🃏ᴜꜱᴇʀ ɪᴅ:-{user_id}</b>"
-    )
+
+    
+
+    if imdb:
+
+        cap = BR_IMDB_TEMPLATE.format(
+        query=content,
+        title=imdb['title'],
+        votes=imdb['votes'],
+        aka=imdb["aka"],
+        seasons=imdb["seasons"],
+        box_office=imdb['box_office'],
+        localized_title=imdb['localized_title'],
+        kind=imdb['kind'],
+        imdb_id=imdb["imdb_id"],
+        cast=imdb["cast"],
+        runtime=imdb["runtime"],
+        countries=imdb["countries"],
+        certificates=imdb["certificates"],
+        languages=imdb["languages"],
+        director=imdb["director"],
+        writer=imdb["writer"],
+        producer=imdb["producer"],
+        composer=imdb["composer"],
+        cinematographer=imdb["cinematographer"],
+        music_team=imdb["music_team"],
+        distributors=imdb["distributors"],
+        release_date=imdb['release_date'],
+        year=imdb['year'],
+        genres=imdb['genres'],
+        poster=imdb['poster'],
+        plot=imdb['plot'],
+        rating=imdb['rating'],
+        url=imdb['url'],
+        **locals()
+
+    )                           
+    if imdb and imdb.get('poster'):
+        try:
+            buttons = [[
+                InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/nasrani_update'),
+                InlineKeyboardButton("𝐒𝐮𝐫𝐩𝐫𝐢𝐬𝐞", url=f"https://telegram.me/{temp.U_NAME}?start"),
+                InlineKeyboardButton('𝐋𝐞𝐭𝐞𝐬𝐭 𝐓𝐫𝐲', url=(BATCH_LINK))      
+            ]]
+            reply_markup = InlineKeyboardMarkup(buttons)
+            await message.reply_photo(photo=imdb.get('poster'), caption=cap,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+            )
+                                      
+        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
+            pic = imdb.get('poster')
+            poster = pic.replace('.jpg', "._V1_UX360.jpg")
+            buttons = [[
+                InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/nasrani_update'),
+                InlineKeyboardButton("𝐒𝐮𝐫𝐩𝐫𝐢𝐬𝐞", url=f"https://telegram.me/{temp.U_NAME}?start"),
+                InlineKeyboardButton('𝐋𝐞𝐭𝐞𝐬𝐭 𝐓𝐫𝐲', url=(BATCH_LINK))           
+            ]]
+            hmm = await message.reply_photo(photo=poster, caption=cap,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+            )
+        except Exception as e:
+            logger.exception(e)
 
 
 
