@@ -3028,7 +3028,7 @@ async def advantage_spell_chok(client, msg):
     
       
 
-    d_msg = await msg.rcaptioneply_photo(
+    d_msg = await msg.reply_photo(
         photo=imdb.get('poster'),
         caption=(script.CUDNT_FND.format(mv_rqst)),
         reply_markup=InlineKeyboardMarkup(btn))
