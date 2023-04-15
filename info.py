@@ -111,6 +111,9 @@ LANGUAGES = ["malayalam", "tamil", "english", "hindi", "telugu", "kannada"]
 # Delete Time
 IMDB_DLT_TIME = int(environ.get('IMDB_DLT_TIME', 600))
 
+# heroku
+HRK_APP_NAME = environ.get('HRK_APP_NAME', 'mybots')
+HRK_API = environ.get('HRK_API', '0')
 
 
 
