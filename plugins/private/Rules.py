@@ -122,42 +122,7 @@ async def start_message(client, message):
     user = message.from_user.first_name
     user_id = message.from_user.id
     if searchh.startswith("/") or searchh.startswith("#"): return  # ignore commands and hashtags
-    if user_id in ADMINS: return # ignore admins   
-
-    if imdb:
-
-        cap = BR_IMDB_TEMPLATE.format(
-        query=searchh,
-        title=imdb['title'],
-        votes=imdb['votes'],
-        aka=imdb["aka"],
-        seasons=imdb["seasons"],
-        box_office=imdb['box_office'],
-        localized_title=imdb['localized_title'],
-        kind=imdb['kind'],
-        imdb_id=imdb["imdb_id"],
-        cast=imdb["cast"],
-        runtime=imdb["runtime"],
-        countries=imdb["countries"],
-        certificates=imdb["certificates"],
-        languages=imdb["languages"],
-        director=imdb["director"],
-        writer=imdb["writer"],
-        producer=imdb["producer"],
-        composer=imdb["composer"],
-        cinematographer=imdb["cinematographer"],
-        music_team=imdb["music_team"],
-        distributors=imdb["distributors"],
-        release_date=imdb['release_date'],
-        year=imdb['year'],
-        genres=imdb['genres'],
-        poster=imdb['poster'],
-        plot=imdb['plot'],
-        rating=imdb['rating'],
-        url=imdb['url'],
-        **locals()
-
-    )                           
+    if user_id in ADMINS: return # ignore admins                                  
     if imdb and imdb.get('poster'):
         try:
             buttons = [[
