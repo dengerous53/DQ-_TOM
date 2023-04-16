@@ -66,7 +66,7 @@ START_MESSAGE = """
 
 
 
-@Client.on_message(filters.command("rules") & filters.media)
+@Client.on_message(filters.command("rules") & filters.emoji)
 async def media(client, message):
     userid = message.from_user.id            
     buttons = [[
