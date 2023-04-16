@@ -652,9 +652,10 @@ async def send_all(bot, userid, files, ident):
                      )
                  )
                     
-        
-            await bot.send_message(text=f"<b><a href='https://t.me/NasraniChatGroup'>Thank For Using Me...</a></b>")
-    
+        else:
+            await bot.send_message(
+                text=f"<b><a href='https://t.me/NasraniChatGroup'>Thank For Using Me...</a></b>",
+                chat_id=userid)
 
         except UserIsBlocked:
             logger.error(f"Usᴇʀ: {userid} ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ!")
