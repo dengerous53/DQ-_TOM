@@ -583,7 +583,7 @@ async def get_token(bot, userid, link, fileid):
     shortened_verify_url = await get_verify_shorted_link(link)
     return str(shortened_verify_url)
 
-async def send_all(bot, userid, files, message, ident):
+async def send_all(bot, userid, files, ident):
     if AUTH_CHANNEL and not await is_subscribed(bot=bot, userid=userid):
         try:
             invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
@@ -619,15 +619,14 @@ async def send_all(bot, userid, files, message, ident):
         )
         return 'verify'
     
-    for file in files:
-        username = message.from_user.first_name
+    for file in files:        
         f_caption = file.caption
         title = file.file_name
         size = get_size(file.file_size)
         if CUSTOM_FILE_CAPTION:
             try:
                 f_caption = CUSTOM_FILE_CAPTION.format(temp.B_NAME,
-                                                        user_name= '' if username is None else username,file_name='' if title is None else title,
+                                                        temp.U_NAME,
                                                         file_size='' if size is None else size,
                                                         file_caption='' if f_caption is None else f_caption)
             except Exception as e:
