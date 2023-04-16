@@ -23,12 +23,12 @@ Hᴇʏ {}
 
 ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..
 
-🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/af_x_su'>ᴄʏʙᴇʀ ᠰ ᴛɢ​</a></b>"""
+🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/kinzanoufal'>ᴋɪɴᴢᴀ ɴᴏᴜꜰᴀʟ ᠰ ᴛɢ​</a></b>"""
 
     ABOUT_TXT = """<b>
 ‣ ᴍʏ ɴᴀᴍᴇ : {}
 ‣ ᴄʀᴇᴀᴛᴏʀ : <a href='tg://settings'>ᴛʜɪs ᴘᴇʀsᴏɴ​</a>
-‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/af_x_su'>ᴄʏʙᴇʀ ᠰ ᴛɢ​</a>
+‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/kinzanoufal'>ᴋɪɴᴢᴀ ɴᴏᴜꜰᴀʟ ᠰ ᴛɢ​</a>
 ‣ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a>
 ‣ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a>
 ‣ ᴅᴀᴛᴀ ʙᴀsᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a>
@@ -171,9 +171,10 @@ Nᴀᴍᴇ - {}"""
     OWNER_INFO = """
 <b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟</b>
     
-<b>• ꜰᴜʟʟ ɴᴀᴍᴇ :</b> || ᴀꜰsᴀʟ ʜᴀsʜɪᴍ ||
-<b>• ᴜꜱᴇʀɴᴀᴍᴇ : @af_x_su</b>
-<b>• ɢɪᴛʜᴜʙ : <a href='https://github.com/CyberTG'>ᴄʏʙᴇʀ ᠰ ᴛɢ​</a></b>
+<b>• ꜰᴜʟʟ ɴᴀᴍᴇ :</b> || ᴋɪɴᴢᴀ ɴᴏᴜꜰᴀʟ
+ ||
+<b>• ᴜꜱᴇʀɴᴀᴍᴇ : @kinzanoufal</b>
+<b>• ɢɪᴛʜᴜʙ : <a href='https://github.com/'>ᴋɪɴᴢᴀ ɴᴏᴜꜰᴀʟ ᠰ ᴛɢ​</a></b>
 """
     NORSLTS = """
 ★ #𝗡𝗼𝗥𝗲𝘀𝘂𝗹𝘁𝘀 ★
@@ -240,7 +241,7 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
     LOGO = """𝑺𝒕𝒂𝒓𝒕𝒊𝒏𝒈.......🥵"""
     
     EARN_TXT = """
-<b>──────「 <a href='https://t.me/AFxSU'>ᴇᴀʀɴ ᴍᴏɴᴇʏ</a> 」─────
+<b>──────「 <a href='https://t.me/kinzanoufal'>ᴇᴀʀɴ ᴍᴏɴᴇʏ</a> 」─────
 
 Now You can start earning 💸 money today with our Simple and easy-to-use bot!
 
