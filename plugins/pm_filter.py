@@ -880,22 +880,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                if clicked == typed:
-                    await query.answer(f"𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐒𝐞𝐧𝐝 𝐅𝐢𝐥𝐞 𝐁𝐨𝐭 𝐏𝐦..", show_alert=True)
-                    return
+                if clicked == typed:                    
                     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                     return
                 else:
                     await query.answer(f"Hᴇʏ {query.from_user.first_name}, Tʜɪs Is Nᴏᴛ Yᴏᴜʀ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ. Rᴇǫᴜᴇsᴛ Yᴏᴜʀ's !", show_alert=True)
             elif settings['botpm']:
                 if clicked == typed:
-                    await query.answer(f"𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐒𝐞𝐧𝐝 𝐅𝐢𝐥𝐞 𝐁𝐨𝐭 𝐏𝐦..", show_alert=True)
-                    return 
                     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                     
                     return
                 else:
                     await query.answer(f"Hᴇʏ {query.from_user.first_name}, Tʜɪs Is Nᴏᴛ Yᴏᴜʀ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ. Rᴇǫᴜᴇsᴛ Yᴏᴜʀ's !", show_alert=True)
+                return
             else:
                 if clicked == typed:
                     await query.answer(f"𝐇𝐞𝐥𝐥𝐨 {query.from_user.first_name}, 𝐆𝐨𝐢𝐧𝐠 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐒𝐞𝐜𝐭𝐢𝐨𝐧...📥", show_alert=True)
