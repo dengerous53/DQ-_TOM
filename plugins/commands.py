@@ -49,10 +49,8 @@ async def start(client, message):
             InlineKeyboardButton('𝐔𝐩𝐝𝐚𝐭𝐞', url='https://t.me/bigmoviesworld'),
             InlineKeyboardButton('𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/NasraniChatGroup')
         ], [
-            InlineKeyboardButton('𝐁𝐨𝐭 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬', url='http://telegra.ph/Minnal-murali-03-06-12')
-        ], [
-            InlineKeyboardButton('𝐒𝐨𝐧𝐠 𝐆𝐫𝐨𝐮𝐩', url='https://t.me/nasrani_batch_store'),
-            InlineKeyboardButton('𝐌𝐨𝐯𝐢𝐞𝐬 𝐆𝐫𝐨𝐮𝐩', url='https://t.me/nasrani_update')
+            InlineKeyboardButton('𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬', url='http://telegra.ph/Minnal-murali-03-06-12'),        
+            InlineKeyboardButton('𝐇𝐞𝐥𝐩 𝐁𝐮𝐭𝐭𝐨𝐧', callback_data='help')          
         ], [
             InlineKeyboardButton('𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩', url='https://t.me/nasrani_update')
         ], [
@@ -102,10 +100,8 @@ async def start(client, message):
             InlineKeyboardButton('𝐔𝐩𝐝𝐚𝐭𝐞', url='https://t.me/bigmoviesworld'),
             InlineKeyboardButton('𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/NasraniChatGroup')
         ], [
-            InlineKeyboardButton('𝐁𝐨𝐭 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬', url='http://telegra.ph/Minnal-murali-03-06-12')
-        ], [
-            InlineKeyboardButton('𝐒𝐨𝐧𝐠 𝐆𝐫𝐨𝐮𝐩', url='https://t.me/nasrani_batch_store'),
-            InlineKeyboardButton('𝐌𝐨𝐯𝐢𝐞𝐬 𝐆𝐫𝐨𝐮𝐩', url='https://t.me/nasrani_update')
+            InlineKeyboardButton('𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬', url='http://telegra.ph/Minnal-murali-03-06-12'),        
+            InlineKeyboardButton('𝐇𝐞𝐥𝐩 𝐁𝐮𝐭𝐭𝐨𝐧', callback_data='help')          
         ], [
             InlineKeyboardButton('𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩', url='https://t.me/nasrani_update')
         ], [
