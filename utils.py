@@ -623,9 +623,9 @@ async def send_all(bot, userid, files, ident):
         f_caption = file.caption
         title = file.file_name
         size = get_size(file.file_size)
-        if CAPTION:
+        if CUSTOM_FILE_CAPTION:
             try:
-                f_caption = CAPTION.format(file_name='' if title is None else title,
+                f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
                                                         file_size='' if size is None else size,
                                                         file_caption='' if f_caption is None else f_caption)
             except Exception as e:
@@ -640,17 +640,16 @@ async def send_all(bot, userid, files, ident):
                 caption=f_caption,
                 protect_content=True if ident == "filep" else False,
                 reply_markup=InlineKeyboardMarkup(
-                                     [
-                                         [
-                                             InlineKeyboardButton('1🎁𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩𝐬🎁', callback_data=f"{pre}#{file_id}")
-                                         ],
-                                         [
-                                             InlineKeyboardButton('🧩𝐆𝐨𝐨𝐠𝐥𝐞🧩', url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}"),
-                                             InlineKeyboardButton('☘𝐈𝐦𝐝𝐛☘', url="https://t.me/+YCA-JWZDNsJkNmI1")
-                                         ]                            
-                                     ]
-                                 )
-                             )
+                    [
+                        [
+                        InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
+                        InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                    ],[
+                        InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/creatorbeatz")
+                        ]
+                    ]
+                )
+            )
         except UserIsBlocked:
             logger.error(f"Usᴇʀ: {userid} ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ!")
             return "Usᴇʀ ɪs ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ ! Uɴʙʟᴏᴄᴋ ᴛᴏ sᴇɴᴅ ғɪʟᴇs!"
