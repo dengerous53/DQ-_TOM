@@ -59,7 +59,6 @@ START_MESSAGE = """
 𝐆𝐫𝐨𝐮𝐩 𝐍𝐚𝐦𝐞 :- {}
 """
 
-CHATS = "-1001831382277"
 
 
 
@@ -77,7 +76,6 @@ async def media(client, message):
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_text(
     text=START_MESSAGE.format(message.from_user.mention, message.chat.title),
-    chat_id=CHATS,
     protect_content=True,
     reply_markup=reply_markup, 
     parse_mode=enums.ParseMode.HTML
