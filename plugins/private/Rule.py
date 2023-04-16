@@ -66,10 +66,9 @@ START_MESSAGE = """
 
 
 
-
-@Client.on_message(filters.command("rules")) 
+@Client.on_message(filters.command("rules") & filters.group & filters.media)
 async def media(client, message):
-    userid = message.from_user.id        
+    userid = message.from_user.id            
     buttons = [[
             InlineKeyboardButton('𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/nasrani_update')
     ]]
