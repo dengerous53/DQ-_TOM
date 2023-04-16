@@ -583,7 +583,7 @@ async def get_token(bot, userid, link, fileid):
     shortened_verify_url = await get_verify_shorted_link(link)
     return str(shortened_verify_url)
 
-async def send_all(bot, userid, files, ident):
+async def send_all(bot, userid, files, message, ident):
     if AUTH_CHANNEL and not await is_subscribed(bot=bot, userid=userid):
         try:
             invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
