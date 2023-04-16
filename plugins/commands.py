@@ -935,7 +935,7 @@ async def settings(client, message):
 
         reply_markup = InlineKeyboardMarkup(buttons)
         if chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-            await message.reply_text(RULES_MESSAGE.format(message.from_user.mention, message.chat.title),
+            await message.reply_text(script.RULES_MESSAGE.format(message.from_user.mention, message.chat.title),
                 protect_content=True,
                 reply_markup=reply_markup, 
                 parse_mode=enums.ParseMode.HTML
