@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # from pyrogram.types import CallbackQuery
 import random
 import os
-from info import SP, CHATS
+from info import SP
 from Script import script
 import os
 from pyrogram import Client, filters, enums
