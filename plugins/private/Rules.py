@@ -80,7 +80,7 @@ UP_MESSAGE = """
 """
 
 
-@Client.on_message(filters.command("rules") & filters.group) 
+@Client.on_message(filters.command("rules")) 
 async def r_message(client, message):
 #    protect = "/pbatch" if PROTECT_CONTENT else "batch"
     mention = message.from_user.mention
