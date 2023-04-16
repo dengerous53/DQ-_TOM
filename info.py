@@ -82,11 +82,11 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 MAX_B_TN = environ.get("MAX_B_TN", "7")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "False")), False)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/MLZ_BOTZ_SUPPORT')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/MLZ_BOTZ')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/NasraniSeries')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/bigmoviesworld')
 MSG_ALRT = environ.get('MSG_ALRT', 'Piracy Is Crime')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MLZ_BOTZ_SUPPORT')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'NasraniSeries')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
@@ -110,7 +110,7 @@ PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
 #redict
 MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/nasrani_update")
-FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/bigmoviesworld")
+FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+7oxSIxY4X0c2ZGVl")
 MSG_ALRT = environ.get('MSG_ALRT', '𝑪𝑯𝑬𝑪𝑲 & 𝑻𝑹𝒀 𝑨𝑳𝑳 𝑴𝒀 𝑭𝑬𝑨𝑻𝑼𝑹𝑬𝑺')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', 0))
 
