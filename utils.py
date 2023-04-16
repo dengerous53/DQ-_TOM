@@ -652,7 +652,7 @@ async def send_all(bot, userid, files, ident):
                      )
                  )
                     
-        else:
+        
             await bot.send_message(
                 text=f"<b><a href='https://t.me/NasraniChatGroup'>Thank For Using Me...</a></b>",
                 chat_id=userid)
