@@ -83,7 +83,7 @@ async def media(client, message):
 
 
 
-@Client.on_message(filters.command("rul") & filters.media)
+@Client.on_message(filters.command('rul'))
 async def media(client, message):
     btn = [[
         InlineKeyboardButton("Oᴘᴇɴ Hᴇʀᴇ ↓", callback_data=f"opnsetgrp#{grp_id}"),
