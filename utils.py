@@ -640,16 +640,22 @@ async def send_all(bot, userid, files, ident):
                 caption=f_caption,
                 protect_content=True if ident == "filep" else False,
                 reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                        InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                        InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                    ],[
-                        InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/creatorbeatz")
-                        ]
-                    ]
-                )
-            )
+                         [
+                             [
+                                 InlineKeyboardButton('4🎁𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩𝐬🎁', url="https://t.me/+YCA-JWZDNsJkNmI1")
+                             ],
+                             [
+                                 InlineKeyboardButton('🧩𝐆𝐨𝐨𝐠𝐥𝐞🧩', url="https://imdb.com"),
+                                 InlineKeyboardButton('☘𝐈𝐦𝐝𝐛☘', url="https://imdb.com")
+                             ]                            
+                         ]
+                     )
+                 )
+                    
+        
+            await bot.send_cached_media((f"<b><a href='https://t.me/NasraniChatGroup'>Thank For Using Me...</a></b>")
+    
+
         except UserIsBlocked:
             logger.error(f"Usᴇʀ: {userid} ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ. Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ!")
             return "Usᴇʀ ɪs ʙʟᴏᴄᴋᴇᴅ ᴛʜᴇ ʙᴏᴛ ! Uɴʙʟᴏᴄᴋ ᴛᴏ sᴇɴᴅ ғɪʟᴇs!"
