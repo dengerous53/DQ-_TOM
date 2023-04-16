@@ -882,6 +882,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 if clicked == typed:
                     await query.answer(f"𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐒𝐞𝐧𝐝 𝐅𝐢𝐥𝐞 𝐁𝐨𝐭 𝐏𝐦..", show_alert=True)
+                    return
                     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                     return
                 else:
@@ -889,6 +890,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             elif settings['botpm']:
                 if clicked == typed:
                     await query.answer(f"𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐒𝐞𝐧𝐝 𝐅𝐢𝐥𝐞 𝐁𝐨𝐭 𝐏𝐦..", show_alert=True)
+                    return 
                     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                     
                     return
