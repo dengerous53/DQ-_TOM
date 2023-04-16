@@ -627,6 +627,7 @@ async def send_all(bot, userid, files, ident):
             try:
                 f_caption = CUSTOM_FILE_CAPTION.format(temp.B_NAME,
                                                         temp.U_NAME,
+                                                        file_name='' if title is None else title,
                                                         file_size='' if size is None else size,
                                                         file_caption='' if f_caption is None else f_caption)
             except Exception as e:
