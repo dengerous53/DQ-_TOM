@@ -1,6 +1,6 @@
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid, ChatAdminRequired
-from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, SHORTLINK_URL, SHORTLINK_API, LOG_CHANNEL, GRP_LNK, CHNL_LNK, CUSTOM_FILE_CAPTION, VERIFY, LOGIN_CHANNEL, CUSTOM_QUERY_CAPTION
+from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, SHORTLINK_URL, SHORTLINK_API, LOG_CHANNEL, GRP_LNK, CHNL_LNK, CUSTOM_FILE_CAPTION, VERIFY, LOGIN_CHANNEL, CAPTION
 from imdb import Cinemagoer 
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
@@ -623,9 +623,9 @@ async def send_all(bot, userid, files, ident):
         f_caption = file.caption
         title = file.file_name
         size = get_size(file.file_size)
-        if CUSTOM_FILE_CAPTION:
+        if CAPTION:
             try:
-                f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
+                f_caption = CAPTION.format(file_name='' if title is None else title,
                                                         file_size='' if size is None else size,
                                                         file_caption='' if f_caption is None else f_caption)
             except Exception as e:
