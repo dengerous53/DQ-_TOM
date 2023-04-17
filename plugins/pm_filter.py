@@ -637,7 +637,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ➪",callback_data=f"next_{req}_{key}_{offset}")]
                 )
             
-    else:
+        else:
             btn.append(
                 [InlineKeyboardButton(text="♨️𝐍𝐎 𝐌𝐎𝐑𝐄 𝐏𝐀𝐆𝐄𝐒 𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄♨️",callback_data="pages")]
             )
@@ -666,23 +666,20 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
 
 
 
+"""
 
+#    btn.insert(0, [
+#        InlineKeyboardButton("! PM !", url="t.me/TGxMULTIBOT")
+#    ])
+#    offset = 0
 
-    btn.insert(0, [
-        InlineKeyboardButton("! PM !", url="t.me/TGxMULTIBOT")
-    ])
-    offset = 0
-
-    btn.append(        [
-            InlineKeyboardButton(
-                text="↺ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↻",
-                callback_data=f"next_{req}_{key}_{offset}"
-                ),
-        ])
-        
-
-    await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
-
+#    btn.append(        [
+#            InlineKeyboardButton(
+#                text="↺ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↻",
+#                callback_data=f"next_{req}_{key}_{offset}"
+#                ),
+#        ])        
+#    await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
 
 
 
