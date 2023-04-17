@@ -2016,7 +2016,11 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0, [
         InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
     ])       
-        await pak.edit(str(e))
+    await msg.reply_chat_action(enums.ChatAction.TYPING)
+    px = await message.reply_text(f"𝐋𝐨𝐚𝐝𝐢𝐧𝐠 --{search}--, {str(total_results)} 𝐅𝐢𝐥𝐞𝐬. 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠...!!!!", quote=True)
+    await asyncio.sleep(1)
+    await px.delete()
+#    await message.delete()
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
