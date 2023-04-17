@@ -54,7 +54,7 @@ class script(object):
     WHOIS"""
 
 """
-    YTTAG"""
+    YOUTUBE"""
 
 """
     ALIVE"""
@@ -65,14 +65,16 @@ class script(object):
 """
     RESTART"""
 
-"""
-   YT_THUMB"""
+"""   
+    MDISK"""
 
 """
-   MDISK"""
+   FUN"""
+
+   """
+   GAMES"""
 
 """
-
 # SPECIAL 🔰🔰🔰
 
     RENAME"""
@@ -111,7 +113,39 @@ class script(object):
     POLL"""
 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐭𝐲𝐩𝐞 /𝐩𝐨𝐥𝐥 𝐜𝐨𝐦𝐦𝐚𝐧𝐝"""
 
+   All_DELETE"""
 
+"""
+   RULES"""
+
+"""
+
+
+# EXTRA FUTURES 🔰🔰🔰
+    EXTRA"""
+EXTRA FSUB
+VERIFY BUTTON
+IMDB SPELL CHECK
+AUTO DELETE
+WELCOME MESSAGE COUSTOM MOD
+STRAT MESSAGE COUSTOM MOD
+AUTO FILTER ON OFF REPLAT MESSAGE
+AUTO FILTER
+SHORT LINK FILTER
+MANUEL FILTER
+GLOBAL FILTER
+FILE STORE
+COUSTOM CAPTION
+WARNING MESSEGE
+REQUEST MOD
+ID, INFO, JSON
+BAN, MUTE, UNBAN
+CONNECTION COMMAND
+SETTINGS COMMAND
+CHATS COMMAND
+USERS COMMAND
+BROADCADT TO PM
+BROADCAST TO GROUP
 
 
 
