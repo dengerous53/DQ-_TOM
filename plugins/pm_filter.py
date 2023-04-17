@@ -2159,9 +2159,9 @@ async def auto_filter(client, msg, spoll=False):
                     await fuk.delete()
                     await message.delete()
  
-                    await message.reply_photo(
-                    photo=random.choice(SP),
-                    caption=f"⚙️𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞: {message.from_user.mention} \n\n𝐌𝐨𝐯𝐢𝐞: {search} \n\n 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲✔️",
+                    await message.reply_text(
+#                    photo=random.choice(SP),
+                    text =f"⚙️𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞: {message.from_user.mention} \n\n𝐌𝐨𝐯𝐢𝐞: {search} \n\n 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲✔️",
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
 
