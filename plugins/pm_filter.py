@@ -2016,7 +2016,9 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0, [
         InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
     ])
-
+        pak = await message.reply('Downloading...')
+    except Exception as e:
+        await pak.edit(str(e))
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
@@ -2158,6 +2160,7 @@ async def auto_filter(client, msg, spoll=False):
                     await asyncio.sleep(120)
                     await fuk.delete()
                     await message.delete()
+                    await pak.delete()
             else:
                     await message.reply_text(
 #                    photo=random.choice(SP),
