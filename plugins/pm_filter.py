@@ -496,7 +496,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             show_alert=True,
         )
     
-    files, m_offset, offset, _ = await get_search_results(query.message.chat.id, search, offset=offset, filter=True)
+    files, m_offset, offset, _ = await get_search_results(query.message.chat.id, search, filter=True)
 
 #    files, m_offset, offset, _ = await get_search_results(chat_id, search, max_results=100)
     files = [file for file in files if re.search(lang, file.file_name, re.IGNORECASE)]
