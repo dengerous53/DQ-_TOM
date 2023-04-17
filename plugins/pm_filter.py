@@ -625,7 +625,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     btn.append(        [
             InlineKeyboardButton(
                 text="↺ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↻",
-                callback_data=f"next_{req}_{key}_{lang.lower()}"
+                callback_data=f"next_{req}_{key}_{offset}_{lang.lower()}"
                 ),
         ])
     
