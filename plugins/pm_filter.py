@@ -216,18 +216,17 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'𝐅𝐢𝐥𝐞𝐬: {total}', 'dupe'),
-                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'{search}', 'tips')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
-
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'𝐅𝐢𝐥𝐞𝐬: {total}', 'dupe'),
-                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'{search}', 'tips')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
                 
@@ -238,35 +237,36 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'𝐅𝐢𝐥𝐞𝐬: {total}', 'dupe'),
-                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'{search}', 'tips')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'𝐅𝐢𝐥𝐞𝐬: {total}', 'dupe'),
-                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'{search}', 'tips')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
     try:
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
                 
@@ -277,17 +277,18 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
 
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
     try:
@@ -380,11 +381,11 @@ async def next_page(bot, query):
                     ],
                 )
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Fɪʟᴇs Tᴏ PM !", callback_data=f"send_fall#files#{offset}")
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀʟʟ", callback_data=f"send_fall#{pre}#{0}"),
+        InlineKeyboardButton("ʙᴏᴛ ᴘᴍ", "dupe"),
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", url=f"https://t.me/{temp.U_NAME}")
     ])
-    btn.insert(0, [
-        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
-    ])
+
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -574,23 +575,21 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         ]
     try:
         if settings['auto_delete']:
-            btn.insert(
-                0,
+            btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
-                    InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'tips'),
-                ],
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
+                ]
             )
 
         else:
-            btn.insert(
-                0,
+            btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
-                    InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'tips'),
-                ],
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
+                ]
             )
 
     except KeyError:
@@ -598,28 +597,29 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         await save_group_settings(grpid, 'auto_delete', True)
         settings = await get_settings(message.chat.id)
         if settings['auto_delete']:
-            btn.insert(
-                0,
+            btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
-                    InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'tips'),
-                ],
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
+                ]
             )
 
         else:
-            btn.insert(
-                0,
+            btn.insert(0, 
                 [
-                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
-                    InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'tips'),
-                ],
+                    InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
+                ]
             )
 
     btn.insert(0, [
-        InlineKeyboardButton("! PM !", url="t.me/nasrani_bot")
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀʟʟ", callback_data=f"send_fall#{pre}#{0}"),
+        InlineKeyboardButton("ʙᴏᴛ ᴘᴍ", "dupe"),
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", url=f"https://t.me/{temp.U_NAME}")
     ])
+
     offset = 0
 
     btn.append(        [
@@ -1975,8 +1975,8 @@ async def auto_filter(client, msg, spoll=False):
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
-                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'𝐈𝐧𝐟𝐨🔰', 'tips')
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
 
@@ -1984,8 +1984,8 @@ async def auto_filter(client, msg, spoll=False):
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
-                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'𝐈𝐧𝐟𝐨🔰', 'tips')
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
                 
@@ -1997,26 +1997,26 @@ async def auto_filter(client, msg, spoll=False):
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
-                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'𝐈𝐧𝐟𝐨🔰', 'tips')
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
         else:
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'🔰𝐅𝐢𝐥𝐞𝐬: {len(files)}', 'dupe'),
-                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
-                    InlineKeyboardButton(f'𝐈𝐧𝐟𝐨🔰', 'tips')
+                    InlineKeyboardButton("𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞🔰", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
+                    
                 ]
             )
 
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Fɪʟᴇs Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}")
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀʟʟ", callback_data=f"send_fall#{pre}#{0}"),
+        InlineKeyboardButton("ʙᴏᴛ ᴘᴍ", "dupe"),
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", url=f"https://t.me/{temp.U_NAME}")
     ])
 
-    btn.insert(0, [
-        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
-    ])       
+     
 #    await message.reply_chat_action(enums.ChatAction.TYPING)
     px = await message.reply_text(f"𝐋𝐨𝐚𝐝𝐢𝐧𝐠 --{search}--, {str(total_results)} 𝐅𝐢𝐥𝐞𝐬. 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠...!!!!")
     await asyncio.sleep(1)
