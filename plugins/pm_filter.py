@@ -381,7 +381,7 @@ async def next_page(bot, query):
                     ],
                 )
     btn.insert(0, [
-        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀʟʟ", callback_data=f"send_fall#{pre}#{0}"),
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀʟʟ", callback_data=f"send_fall#files#{offset}"),
         InlineKeyboardButton("ʙᴏᴛ ᴘᴍ", "dupe"),
         InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", url=f"https://t.me/{temp.U_NAME}")
     ])
