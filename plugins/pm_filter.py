@@ -606,9 +606,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
 #        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
 #    ])       
 #    await message.reply_chat_action(enums.ChatAction.TYPING)
-    px = await message.reply_text(f"𝐋𝐨𝐚𝐝𝐢𝐧𝐠 --{search}--, {str(total_results)} 𝐅𝐢𝐥𝐞𝐬. 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠...!!!!")
-    await asyncio.sleep(1)
-    await px.delete()
+    
 
 
 
