@@ -344,8 +344,8 @@ async def next_page(bot, query):
                 )
     btn.insert(0, [
         InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀʟʟ", callback_data=f"send_fall#files#{offset}"),
-        InlineKeyboardButton("ʙᴏᴛ ᴘᴍ", "dupe"),
-        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton("ʙᴏᴛ ᴘᴍ", url=f"https://t.me/{temp.U_NAME}"),
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", "dupe")
     ])
 
     try:
@@ -577,9 +577,9 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             )
 
     btn.insert(0, [
-        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀʟʟ", callback_data=f"send_fall#{pre}#{0}"),
-        InlineKeyboardButton("ʙᴏᴛ ᴘᴍ", "dupe"),
-        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀʟʟ", callback_data=f"send_fall#files#{offset}"),
+        InlineKeyboardButton("ʙᴏᴛ ᴘᴍ", url=f"https://t.me/{temp.U_NAME}"),
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", "dupe")
     ])
 
     offset = 0
@@ -1973,9 +1973,9 @@ async def auto_filter(client, msg, spoll=False):
             )
 
     btn.insert(0, [
-        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀʟʟ", callback_data=f"send_fall#{pre}#{0}"),
-        InlineKeyboardButton("ʙᴏᴛ ᴘᴍ", "dupe"),
-        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ ᴀʟʟ", callback_data=f"send_fall#files#{offset}"),
+        InlineKeyboardButton("ʙᴏᴛ ᴘᴍ", url=f"https://t.me/{temp.U_NAME}"),
+        InlineKeyboardButton("ꜱᴇʟᴇᴄᴛ", "dupe")
     ])
 
      
