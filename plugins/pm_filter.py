@@ -2015,9 +2015,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0, [
         InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
-    ])
-        pak = await message.reply('Downloading...')
-    except Exception as e:
+    ])       
         await pak.edit(str(e))
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
@@ -2160,8 +2158,7 @@ async def auto_filter(client, msg, spoll=False):
                     await asyncio.sleep(120)
                     await fuk.delete()
                     await message.delete()
-                    await pak.delete()
-            else:
+                    return
                     await message.reply_text(
 #                    photo=random.choice(SP),
                     text =f"⚙️𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞: {message.from_user.mention} \n\n𝐌𝐨𝐯𝐢𝐞: {search} \n\n 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲✔️",
