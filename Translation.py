@@ -1,7 +1,5 @@
 class script(object):
         
-    POLL"""
-𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐭𝐲𝐩𝐞 /𝐩𝐨𝐥𝐥 𝐜𝐨𝐦𝐦𝐚𝐧𝐝"""
     STICKER"""
 /𝐬𝐭𝐢𝐜𝐤𝐞𝐫𝐢𝐝 𝐬𝐭𝐢𝐜𝐤𝐞𝐫 𝐢𝐝
 /𝐠𝐞𝐭𝐬𝐭𝐢𝐜𝐤𝐞𝐫 𝐜𝐫𝐞𝐚𝐭𝐞 𝐬𝐮𝐩𝐩𝐫𝐚𝐭𝐞 𝐬𝐭𝐢𝐜𝐤𝐞𝐫
@@ -71,7 +69,47 @@ class script(object):
    YT_THUMB"""
 
 """
+   MDISK"""
 
+"""
+
+# SPECIAL 🔰🔰🔰
+
+    RENAME"""
+
+"""
+   ANTI_COMMAND"""
+
+"""
+   LINK_BLOCK"""
+
+"""
+    FORWARD_BLOCK"""
+
+"""
+    AUTO_APPROVE"""
+
+"""
+    BROADCAST_IMDB"""
+
+"""
+    BROADCAST_FSUB"""
+
+"""
+    BROADCAST_ADS"""
+
+"""
+   GROUP_TITLE"""
+
+"""
+    GROUP BIO"""
+
+"""
+    ADMIN_CHAT"""
+
+"""
+    POLL"""
+𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐭𝐲𝐩𝐞 /𝐩𝐨𝐥𝐥 𝐜𝐨𝐦𝐦𝐚𝐧𝐝"""
 
 
 
