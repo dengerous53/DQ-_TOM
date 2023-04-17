@@ -136,7 +136,7 @@ async def give_filter(client, message):
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
-    ident, search, lang, req, key, offset = query.data.split("_")
+    ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
         return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
     try:
@@ -625,7 +625,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     btn.append(        [
             InlineKeyboardButton(
                 text="↺ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↻",
-                callback_data=f"next_{req}_{key}_{offset}_{lang.lower()}"
+                callback_data=f"languages_{req}_{key}_{offset}"
                 ),
         ])
     
