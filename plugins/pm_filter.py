@@ -579,7 +579,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 [
                     InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}),
+                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}"),
                 ],
             )
 
@@ -589,7 +589,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 [
                     InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}),
+                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}"),
                 ],
             )
 
@@ -603,7 +603,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 [
                     InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}),
+                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}"),
                 ],
             )
 
@@ -613,7 +613,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 [
                     InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}),
+                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}"),
                 ],
             )
 
