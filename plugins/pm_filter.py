@@ -485,7 +485,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
 @Client.on_callback_query(filters.regex(r"^fl#"))
 async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     _, lang, search, key = query.data.split("#")
-
+    BUTTONS[key] = search
     search = search.replace("_", " ")
     req = query.from_user.id
     chat_id = query.message.chat.id
@@ -613,7 +613,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
 
 
 
-    if offset != "":
+
 #        key = f"{query.message.chat.id}-{query.message.id}"
         BUTTONS[key] = search
         req = query.from_user.id
