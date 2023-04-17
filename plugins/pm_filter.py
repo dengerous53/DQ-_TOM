@@ -496,14 +496,9 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             show_alert=True,
         )
     
-
-
-    files, m_offset, offset, _ = await get_search_results(chat_id, search, max_results=10)
+    
+    files, offset, _ = await get_search_results(chat_id, search, max_results=10)
     files = [file for file in files if re.search(lang, file.file_name, re.IGNORECASE)]
-    try:
-        m_offset = int(m_offset)
-    except:
-        n_offset = 0
     if not files:
         await query.answer("🚫 𝗡𝗼 𝗙𝗶𝗹𝗲 𝗪𝗲𝗿𝗲 𝗙𝗼𝘂𝗻𝗱 🚫", show_alert=1)
     
@@ -578,14 +573,13 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
     try:
-        BUTTONS[key] = search
         if settings['auto_delete']:
             btn.insert(
                 0,
                 [
                     InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'tips'),
+                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}),
                 ],
             )
 
@@ -595,88 +589,49 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 [
                     InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
                     InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
-                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', 'tips'),
+                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}),
                 ],
             )
-#    btn.insert(0, [
-#        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Fɪʟᴇs Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}")
-#    ])
 
-#    btn.insert(0, [
-#        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
-#    ])       
-#    await message.reply_chat_action(enums.ChatAction.TYPING)
+    except KeyError:
+        grpid = await active_connection(str(message.from_user.id))
+        await save_group_settings(grpid, 'auto_delete', True)
+        settings = await get_settings(message.chat.id)
+        if settings['auto_delete']:
+            btn.insert(
+                0,
+                [
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
+                    InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
+                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}),
+                ],
+            )
+
+        else:
+            btn.insert(
+                0,
+                [
+                    InlineKeyboardButton("ᴀʟʟ​", callback_data=f"send_fall#files#{offset}"),
+                    InlineKeyboardButton("ꜰᴏʀᴍᴀᴛ​", 'format'),
+                    InlineKeyboardButton(f'ᴛɪᴘs​ ⚜', callback_data=f"next_{req}_{key}_{offset}),
+                ],
+            )
+
+    btn.insert(0, [
+        InlineKeyboardButton("! PM !", url="t.me/TGxMULTIBOT")
+    ])
+    offset = 0
+
+    btn.append(        [
+            InlineKeyboardButton(
+                text="↺ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↻",
+                callback_data=f"next_{req}_{key}_{offset}"
+                ),
+        ])
+    
     
 
-
-
-
-
-
-
-#        key = f"{query.message.chat.id}-{query.message.id}"
-        BUTTONS[key] = search
-        req = query.from_user.id
-        try:
-            settings = await get_settings(chat_id)
-            if settings['max_btn']:
-                btn.append(
-                    [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ➪",callback_data=f"next_{req}_{key}_{offset}")]
-                )
-            else:
-                btn.append(
-                    [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ➪",callback_data=f"next_{req}_{key}_{offset}")]
-                )
-        except KeyError:
-            await save_group_settings(chat_id, 'max_btn', False)
-            settings = await get_settings(chat_id)
-            if settings['max_btn']:
-                btn.append(
-                    [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ➪",callback_data=f"next_{req}_{key}_{offset}")]
-                )
-            else:
-                btn.append(
-                    [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ➪",callback_data=f"next_{req}_{key}_{offset}")]
-                )
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#    btn.insert(0, [
-#        InlineKeyboardButton("! PM !", url="t.me/TGxMULTIBOT")
-#    ])
-#    offset = 0
-
-#    btn.append(        [
-#            InlineKeyboardButton(
-#                text="↺ ʙᴀᴄᴋ ᴛᴏ ꜰɪʟᴇs ​↻",
-#                callback_data=f"next_{req}_{key}_{offset}"
-#                ),
-#        ])        
-#    await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
+    await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
 
 
 
