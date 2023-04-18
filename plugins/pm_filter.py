@@ -1578,7 +1578,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
 
 
-    elif query.data == "modules":
+    elif query.data == "modules1":
         buttons = [[
             InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ', callback_data='filters'),
             InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='store_file'),
@@ -1599,6 +1599,38 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start'),
             InlineKeyboardButton('ᴘᴀɢᴇ 1/1', callback_data='extra'),
             InlineKeyboardButton('ɴᴇxᴛ', callback_data='stats')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+
+
+
+    elif query.data == "modules2":
+        buttons = [[
+            InlineKeyboardButton('ᴏᴘᴇɴᴀɪ', callback_data='filters'),
+            InlineKeyboardButton('ᴘᴀꜱꜱᴡᴏʀᴅ', callback_data='store_file'),
+            InlineKeyboardButton('ꜰᴏɴᴛ', callback_data='filters')
+        ], [
+            InlineKeyboardButton('ꜱʜᴀʀᴇ_ᴛᴇxᴛ', callback_data='coct'),
+            InlineKeyboardButton('ᴡʜᴏɪꜱ', callback_data='extra'),
+            InlineKeyboardButton('ᴀʟɪᴠᴇ', callback_data='extra')
+        ], [
+            InlineKeyboardButton('ʏᴏᴜᴛᴜʙᴇ', callback_data='start'),
+            InlineKeyboardButton('ꜱᴛᴋ_ɪᴍɢ', callback_data='extra'),
+            InlineKeyboardButton('ʀᴇꜱᴛᴀʀᴛ', callback_data='stats')
+        ], [
+            InlineKeyboardButton('ᴍᴅɪꜱᴋ', callback_data='start'),
+            InlineKeyboardButton('ꜰᴜɴ', callback_data='extra'),
+            InlineKeyboardButton('ɢᴀᴍᴇꜱ', callback_data='stats')
+        ], [
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ᴘᴀɢᴇ 1/2', callback_data='extra'),
+            InlineKeyboardButton('ꜱᴘᴇᴄɪᴀʟ', callback_data='special')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
