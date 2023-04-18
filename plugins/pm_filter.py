@@ -1250,11 +1250,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 
 
-    elif query.data.startswith("option"):
-        userid = message.from_user.id if message.from_user else None
+    elif query.data.startswith("setting"):
+        userid = query.from_user.id if query.from_user else None
         if not userid:
-            return await message.reply(f"Yᴏᴜ ᴀʀᴇ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ. Usᴇ /connect {message.chat.id} ɪɴ PM")
-        chat_type = message.chat.type
+            return await message.reply(f"Yᴏᴜ ᴀʀᴇ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ. Usᴇ /connect {query.message.chat.id} ɪɴ PM")
+        chat_type = query.message.chat.type
 
         if chat_type == enums.ChatType.PRIVATE:
             grpid = await active_connection(str(userid))
@@ -1262,17 +1262,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 grp_id = grpid
                 try:
                     chat = await client.get_chat(grpid)
-                    title = chat.title
+                    title = query.message.chat.title
                 except:
-                    await message.reply_text("Mᴀᴋᴇ sᴜʀᴇ I'ᴍ ᴘʀᴇsᴇɴᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ !", quote=True)
+                    await query.message.reply_text("Mᴀᴋᴇ sᴜʀᴇ I'ᴍ ᴘʀᴇsᴇɴᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ !", quote=True)
                     return
             else:
-                await message.reply_text("I'ᴍ ɴᴏᴛ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘs !", quote=True)
+                await query.message.reply_text("I'ᴍ ɴᴏᴛ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘs !", quote=True)
                 return
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-            grp_id = message.chat.id
-            title = message.chat.title
+            grp_id = query.message.chat.id
+            title = query.message.chat.title
 
         else:
             return
@@ -1411,15 +1411,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
             reply_markup = InlineKeyboardMarkup(buttons)
             if chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-                await message.reply_text(script.RULES_MESSAGE.format(message.from_user.mention, message.chat.title),
+                await query.message.reply_text(script.RULES_MESSAGE.format(query.message.from_user.mention, query.message.chat.title),
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn),
                     disable_web_page_preview=True,
                     parse_mode=enums.ParseMode.HTML,
-                    reply_to_message_id=message.id
+                    reply_to_message_id=query.message.id
                 )
             else:
-                await message.reply_text(
+                await query.message.reply_text(
                     text=f"<b>Cʜᴀɴɢᴇ Yᴏᴜʀ Sᴇᴛᴛɪɴɢs Fᴏʀ {title} As Yᴏᴜʀ Wɪsʜ ⚙</b>",
                     reply_markup=reply_markup,
                     disable_web_page_preview=True,
@@ -1668,7 +1668,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩', url='https://t.me/nasrani_update')
         ], [
             InlineKeyboardButton('𝐈𝐧𝐥𝐢𝐧𝐞', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬', callback_data=f"opnsetpm")
+            InlineKeyboardButton('𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬', callback_data=f"settings")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
