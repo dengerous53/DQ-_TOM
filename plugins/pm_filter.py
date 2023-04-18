@@ -1474,6 +1474,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(text=script.SINFO, show_alert=True)
 
     elif query.data == "start":
+        grp_id = query.message.chat.id
+        title = query.message.chat.title
         buttons = [[
             InlineKeyboardButton('𝐀𝐝𝐝 𝐌𝐞 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [                    
