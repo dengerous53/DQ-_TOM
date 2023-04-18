@@ -137,7 +137,7 @@ class script(object):
 /𝐜𝐨𝐮𝐧𝐭
 """
 # SPECIAL 🔰🔰🔰
-   SPECIAL = """
+    SPECIAL = """
     RENAME
 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐒𝐮𝐩𝐩𝐨𝐫𝐭
 𝐅𝐚𝐬𝐭 𝐑𝐞𝐧𝐚𝐦𝐞 𝐀𝐥𝐥 𝐅𝐢𝐥𝐞𝐬
