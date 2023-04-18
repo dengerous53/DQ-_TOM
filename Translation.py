@@ -137,7 +137,7 @@ class script(object):
 /𝐜𝐨𝐮𝐧𝐭
 """
 # SPECIAL 🔰🔰🔰
-    SPECIAL = """
+    SPECIAL_MOD = """
     RENAME
 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐒𝐮𝐩𝐩𝐨𝐫𝐭
 𝐅𝐚𝐬𝐭 𝐑𝐞𝐧𝐚𝐦𝐞 𝐀𝐥𝐥 𝐅𝐢𝐥𝐞𝐬
@@ -250,6 +250,9 @@ class script(object):
 𝐒𝐓𝐀𝐓𝐒
 """
 
+
+    SPECIAL = """
+𝐂𝐡𝐞𝐜𝐤 𝐘𝐨𝐮𝐫 𝐅𝐚𝐯𝐨𝐫𝐢𝐭𝐞 𝐌𝐨𝐝"""
 
 
 
