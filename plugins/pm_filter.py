@@ -1576,6 +1576,39 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+
+
+    elif query.data == "modules":
+        buttons = [[
+            InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ', callback_data='filters'),
+            InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='store_file'),
+            InlineKeyboardButton('ᴛᴏʀʀᴇɴᴛ', callback_data='filters')
+        ], [
+            InlineKeyboardButton('ᴛᴛꜱ', callback_data='coct'),
+            InlineKeyboardButton('ꜱᴏɴɢ', callback_data='extra'),
+            InlineKeyboardButton('ꜱᴛᴀᴛᴜꜱ', callback_data='extra')
+        ], [
+            InlineKeyboardButton('ᴋᴀɴɢ', callback_data='start'),
+            InlineKeyboardButton('ꜱʜᴏʀᴛɴᴇʀ', callback_data='extra'),
+            InlineKeyboardButton('ɪᴍɢ ᴘᴅꜰ', callback_data='stats')
+        ], [
+            InlineKeyboardButton('ɢɪᴛʜᴜʙ', callback_data='start'),
+            InlineKeyboardButton('ᴛʀᴀɴꜱʟᴀᴛɪᴏɴ', callback_data='extra'),
+            InlineKeyboardButton('ᴇᴠᴇʟ', callback_data='stats')
+        ], [
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ᴘᴀɢᴇ 1/1', callback_data='extra'),
+            InlineKeyboardButton('ɴᴇxᴛ', callback_data='stats')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+
+
     elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='about')
