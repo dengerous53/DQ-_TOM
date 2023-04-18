@@ -1683,7 +1683,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "special_mod1":
         buttons = [[
-            InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='modules2')
+            InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='special')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1708,7 +1708,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "special_mod2":
         buttons = [[
-            InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='modules2')
+            InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='special')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
