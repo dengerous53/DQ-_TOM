@@ -253,6 +253,7 @@ class script(object):
 
     SPECIAL_TXT = """
 𝐂𝐡𝐞𝐜𝐤 𝐘𝐨𝐮𝐫 𝐅𝐚𝐯𝐨𝐫𝐢𝐭𝐞 𝐌𝐨𝐝
+
 """
 
 
