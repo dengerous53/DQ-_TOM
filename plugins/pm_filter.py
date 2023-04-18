@@ -1580,25 +1580,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "modules1":
         buttons = [[
-            InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ', callback_data='filters'),
-            InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='store_file'),
-            InlineKeyboardButton('ᴛᴏʀʀᴇɴᴛ', callback_data='filters')
+            InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ', callback_data='sticker'),
+            InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='telegraph'),
+            InlineKeyboardButton('ᴛᴏʀʀᴇɴᴛ', callback_data='torrent')
         ], [
-            InlineKeyboardButton('ᴛᴛꜱ', callback_data='coct'),
-            InlineKeyboardButton('ꜱᴏɴɢ', callback_data='extra'),
-            InlineKeyboardButton('ꜱᴛᴀᴛᴜꜱ', callback_data='extra')
+            InlineKeyboardButton('ᴛᴛꜱ', callback_data='tts'),
+            InlineKeyboardButton('ꜱᴏɴɢ', callback_data='song'),
+            InlineKeyboardButton('ꜱᴛᴀᴛᴜꜱ', callback_data='status')
         ], [
-            InlineKeyboardButton('ᴋᴀɴɢ', callback_data='start'),
-            InlineKeyboardButton('ꜱʜᴏʀᴛɴᴇʀ', callback_data='extra'),
-            InlineKeyboardButton('ɪᴍɢ ᴘᴅꜰ', callback_data='stats')
+            InlineKeyboardButton('ᴋᴀɴɢ', callback_data='kang'),
+            InlineKeyboardButton('ꜱʜᴏʀᴛɴᴇʀ', callback_data='shortner'),
+            InlineKeyboardButton('ɪᴍɢ ᴘᴅꜰ', callback_data='img_pdf')
         ], [
-            InlineKeyboardButton('ɢɪᴛʜᴜʙ', callback_data='start'),
-            InlineKeyboardButton('ᴛʀᴀɴꜱʟᴀᴛɪᴏɴ', callback_data='extra'),
-            InlineKeyboardButton('ᴇᴠᴇʟ', callback_data='stats')
+            InlineKeyboardButton('ɢɪᴛʜᴜʙ', callback_data='github'),
+            InlineKeyboardButton('ᴛʀᴀɴꜱʟᴀᴛɪᴏɴ', callback_data='translation'),
+            InlineKeyboardButton('ᴇᴠᴇʟ', callback_data='evel')
         ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start'),
             InlineKeyboardButton('ᴘᴀɢᴇ 1/1', callback_data='extra'),
-            InlineKeyboardButton('ɴᴇxᴛ', callback_data='stats')
+            InlineKeyboardButton('ɴᴇxᴛ', callback_data='modules2')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1612,23 +1612,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "modules2":
         buttons = [[
-            InlineKeyboardButton('ᴏᴘᴇɴᴀɪ', callback_data='filters'),
-            InlineKeyboardButton('ᴘᴀꜱꜱᴡᴏʀᴅ', callback_data='store_file'),
-            InlineKeyboardButton('ꜰᴏɴᴛ', callback_data='filters')
+            InlineKeyboardButton('ᴏᴘᴇɴᴀɪ', callback_data='openai'),
+            InlineKeyboardButton('ᴘᴀꜱꜱᴡᴏʀᴅ', callback_data='password'),
+            InlineKeyboardButton('ꜰᴏɴᴛ', callback_data='font')
         ], [
-            InlineKeyboardButton('ꜱʜᴀʀᴇ_ᴛᴇxᴛ', callback_data='coct'),
-            InlineKeyboardButton('ᴡʜᴏɪꜱ', callback_data='extra'),
-            InlineKeyboardButton('ᴀʟɪᴠᴇ', callback_data='extra')
+            InlineKeyboardButton('ꜱʜᴀʀᴇ ᴛᴇxᴛ', callback_data='share_text'),
+            InlineKeyboardButton('ᴡʜᴏɪꜱ', callback_data='whois'),
+            InlineKeyboardButton('ᴀʟɪᴠᴇ', callback_data='alive')
         ], [
-            InlineKeyboardButton('ʏᴏᴜᴛᴜʙᴇ', callback_data='start'),
-            InlineKeyboardButton('ꜱᴛᴋ_ɪᴍɢ', callback_data='extra'),
-            InlineKeyboardButton('ʀᴇꜱᴛᴀʀᴛ', callback_data='stats')
+            InlineKeyboardButton('ʏᴏᴜᴛᴜʙᴇ', callback_data='youtube'),
+            InlineKeyboardButton('ꜱᴛᴋ ɪᴍɢ', callback_data='stk_img'),
+            InlineKeyboardButton('ʀᴇꜱᴛᴀʀᴛ', callback_data='restart')
         ], [
-            InlineKeyboardButton('ᴍᴅɪꜱᴋ', callback_data='start'),
-            InlineKeyboardButton('ꜰᴜɴ', callback_data='extra'),
-            InlineKeyboardButton('ɢᴀᴍᴇꜱ', callback_data='stats')
+            InlineKeyboardButton('ᴍᴅɪꜱᴋ', callback_data='mdisk'),
+            InlineKeyboardButton('ꜰᴜɴ', callback_data='fun'),
+            InlineKeyboardButton('ɢᴀᴍᴇꜱ', callback_data='games')
         ], [
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='modules1'),
             InlineKeyboardButton('ᴘᴀɢᴇ 1/2', callback_data='extra'),
             InlineKeyboardButton('ꜱᴘᴇᴄɪᴀʟ', callback_data='special')
         ]]
@@ -1639,6 +1639,26 @@ async def cb_handler(client: Client, query: CallbackQuery):
             query.message.id, 
             InputMediaPhoto(random.choice(PICS))
         )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     elif query.data == "source":
