@@ -123,42 +123,62 @@ class script(object):
 𝐓𝐲𝐩𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 /𝐦 𝐚𝐧𝐝 𝐘𝐨𝐮𝐫 𝐥𝐢𝐧𝐤
 """
    FUN"""
+𝐅𝐮𝐧 𝐌𝐨𝐝
 
+𝐉𝐮𝐬𝐭 𝐒𝐞𝐧𝐝 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 /𝐟𝐮𝐧
    """
    GAMES"""
+𝐄𝐦𝐨𝐣𝐢 𝐆𝐚𝐦𝐞𝐬
 
+/𝐚𝐫𝐫𝐨𝐰
+/𝐠𝐨𝐚𝐥
+/𝐝𝐢𝐜𝐞
+/𝐛𝐞𝐚𝐤
+/𝐜𝐨𝐮𝐧𝐭
 """
 # SPECIAL 🔰🔰🔰
 
     RENAME"""
+𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐒𝐮𝐩𝐩𝐨𝐫𝐭
+𝐅𝐚𝐬𝐭 𝐑𝐞𝐧𝐚𝐦𝐞 𝐀𝐥𝐥 𝐅𝐢𝐥𝐞𝐬
+𝐂𝐨𝐧𝐯𝐞𝐫𝐭 𝐓𝐨 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭 𝐚𝐧𝐝 𝐕𝐢𝐝𝐞𝐨 𝐒𝐞𝐥𝐞𝐜𝐭 𝐌𝐨𝐝
+𝐓𝐡𝐢𝐬 𝐌𝐨𝐝 𝐏𝐫𝐢𝐯𝐚𝐭𝐞.
 
+𝐎𝐧𝐥𝐲 𝐀𝐝𝐦𝐢𝐧 𝐔𝐬𝐞 𝐌𝐨𝐝
 """
    ANTI_COMMAND"""
 
+𝐀𝐧𝐭𝐢𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐁𝐥𝐨𝐜𝐤𝐞𝐝 𝐆𝐫𝐨𝐮𝐩
 """
    LINK_BLOCK"""
-
+𝐀𝐥𝐥 𝐔𝐫𝐥 𝐋𝐢𝐧𝐤 𝐁𝐥𝐨𝐜𝐤𝐞𝐝 𝐆𝐫𝐨𝐮𝐩
 """
     FORWARD_BLOCK"""
-
+𝐀𝐥𝐥 𝐅𝐨𝐫𝐰𝐚𝐫𝐝 𝐅𝐢𝐥𝐞𝐬 𝐁𝐥𝐨𝐜𝐤𝐞𝐝 𝐆𝐫𝐨𝐮𝐩
 """
     AUTO_APPROVE"""
-
+𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐜 𝐀𝐩𝐩𝐫𝐨𝐯𝐞 𝐘𝐨𝐮𝐫 𝐅𝐬𝐮𝐛 𝐂𝐡𝐚𝐧𝐧𝐞𝐥
 """
     BROADCAST_IMDB"""
+𝐍𝐞𝐰 𝐅𝐢𝐥𝐦 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 𝐒𝐢𝐦𝐩𝐥𝐞 𝐒𝐡𝐨𝐫𝐭𝐜𝐮𝐭 𝐂𝐨𝐦𝐦𝐚𝐧𝐝..
 
+𝐓𝐡𝐢𝐬 𝐌𝐨𝐝 𝐏𝐫𝐢𝐯𝐚𝐭𝐞.
+𝐎𝐧𝐥𝐲 𝐀𝐝𝐦𝐢𝐧𝐬 𝐔𝐬𝐞 𝐌𝐨𝐝
 """
     BROADCAST_FSUB"""
-
+𝐈𝐧𝐯𝐢𝐭𝐞 𝐌𝐨𝐝, 𝐂𝐨𝐬𝐭𝐨𝐦 𝐁𝐮𝐭𝐭𝐨𝐧 𝐔𝐫𝐥 𝐚𝐧𝐝 𝐓𝐞𝐱𝐭 𝐒𝐮𝐩𝐩𝐨𝐫𝐭.
 """
     BROADCAST_ADS"""
-
+𝐀𝐃𝐒 𝐌𝐨𝐝 𝐒𝐮𝐩𝐩𝐨𝐫𝐭
+𝐂𝐨𝐮𝐬𝐭𝐨𝐦 𝐌𝐨𝐝
 """
    GROUP_TITLE"""
-
+𝐆𝐫𝐨𝐮𝐩 𝐓𝐢𝐭𝐥𝐞 𝐂𝐡𝐚𝐧𝐠𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝
+𝐑𝐞𝐩𝐥𝐲 𝐭𝐨 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐬𝐞𝐧𝐝 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 /𝐭𝐢𝐭𝐥𝐞
 """
     GROUP BIO"""
-
+𝐆𝐫𝐨𝐮𝐩 𝐁𝐢𝐨 𝐂𝐡𝐚𝐧𝐠𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝
+𝐑𝐞𝐩𝐥𝐲 𝐭𝐨 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐬𝐞𝐧𝐝 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 /𝐛𝐢𝐨
 """
     ADMIN_CHAT"""
 
@@ -166,57 +186,71 @@ class script(object):
     POLL"""
 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐭𝐲𝐩𝐞 /𝐩𝐨𝐥𝐥 𝐜𝐨𝐦𝐦𝐚𝐧𝐝"""
    EXTRA_ALERT_BUTTON"""
+𝐘𝐨𝐮 𝐜𝐚𝐧 𝐜𝐨𝐧𝐭𝐚𝐜𝐭 𝐮𝐬 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐢𝐬 𝐛𝐨𝐭
 
+𝐓𝐲𝐩𝐞 /𝐂𝐡𝐚𝐭 𝐇𝐞𝐥𝐥𝐨 𝐀𝐝𝐦𝐢𝐧𝐬
 """
 
    All_DELETE"""
+𝐀𝐮𝐭𝐨 𝐃𝐞𝐥𝐞𝐭𝐞 𝐁𝐨𝐭 𝐌𝐞𝐬𝐬𝐚𝐠𝐞𝐬 𝐚𝐧𝐝 𝐔𝐬𝐞𝐫𝐬 𝐌𝐞𝐬𝐬𝐚𝐠𝐞
 
+𝐀𝐥𝐥 𝐌𝐞𝐬𝐬𝐚𝐠𝐞𝐬 𝐖𝐨𝐫𝐤𝐢𝐧𝐠[𝐭𝐞𝐱𝐭, 𝐩𝐡𝐨𝐭𝐨, 𝐝𝐨𝐜𝐮𝐦𝐞𝐧𝐭, 𝐚𝐧𝐝 𝐨𝐭𝐡𝐞𝐫 𝐦𝐞𝐝𝐢𝐚 𝐟𝐢𝐥𝐞𝐬]
 """
    RULES"""
+𝐑𝐮𝐥𝐞𝐬 𝐌𝐨𝐝 𝐒𝐮𝐩𝐩𝐨𝐫𝐭
 
+𝐏𝐫𝐨𝐭𝐞𝐜𝐭 𝐌𝐨𝐝 𝐒𝐮𝐩𝐩𝐨𝐫𝐭
 """
     AI_CHAT"""
+𝐀𝐢 𝐂𝐡𝐚𝐭 𝐒𝐮𝐩𝐩𝐨𝐫𝐭
 
+𝐎𝐧𝐥𝐲 𝐖𝐨𝐫𝐤 𝐒𝐢𝐧𝐠𝐥𝐞 𝐆𝐫𝐨𝐮𝐩
 """
     VALUES"""
+𝐇𝐞𝐫𝐨𝐤𝐮 𝐕𝐚𝐫𝐬 𝐒𝐞𝐭 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐁𝐨𝐭 𝐏𝐦
 
+/𝐬𝐞𝐭𝐯𝐚𝐫 𝐀𝐃𝐌𝐈𝐍𝐒 -𝟏𝟐𝟑𝟒𝟓𝟔
+
+𝐓𝐡𝐢𝐬 𝐌𝐨𝐝 𝐏𝐫𝐢𝐯𝐚𝐭𝐞
+
+𝐀𝐝𝐦𝐢𝐧𝐬 𝐔𝐬𝐞 𝐎𝐧𝐥𝐲
 """
 
 # EXTRA FUTURES 🔰🔰🔰
-    EXTRA"""
-GROUP REQUEST FSUB CHANNEL
-MULTY FSUB CHANNEL
-VERIFY BUTTON
-SPELL CHECK
-SPELL CHECK IMDB SUPPORT
-AUTO DELETE
-WELCOME MESSAGE COUSTOM MOD
-STRAT MESSAGE COUSTOM MOD
-AUTO FILTER ON OFF REPLAT MESSAGE
-AUTO FILTER
-AUTO DELETE
-SHORT LINK FILTER
-MANUEL FILTER
-GLOBAL FILTER
-FILE STORE
-LANGAGE FUTURE
-SELECT, SELECTE ALL FILES MOD
-COUSTOM CAPTION
-WARNING MESSEGE
-REQUEST MOD
-ID, INFO, JSON
-BAN, MUTE, UNBAN
-CONNECTION COMMAND
-IMDB SEARCH
-PRE DVD RIP ALL PRINT DELETES
-INLINE SEARCH
-SETTINGS COMMAND
-CHATS COMMAND
-USERS COMMAND
-BROADCADT TO PM
-BROADCAST TO GROUP
-MULTI DATABASE
-STATS
+    EXTRA_MOD"""
+𝐆𝐑𝐎𝐔𝐏 𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐅𝐒𝐔𝐁 𝐂𝐇𝐀𝐍𝐍𝐄𝐋
+𝐌𝐔𝐋𝐓𝐘 𝐅𝐒𝐔𝐁 𝐂𝐇𝐀𝐍𝐍𝐄𝐋
+𝐕𝐄𝐑𝐈𝐅𝐘 𝐁𝐔𝐓𝐓𝐎𝐍
+𝐒𝐏𝐄𝐋𝐋 𝐂𝐇𝐄𝐂𝐊
+𝐒𝐏𝐄𝐋𝐋 𝐂𝐇𝐄𝐂𝐊 𝐈𝐌𝐃𝐁 𝐒𝐔𝐏𝐏𝐎𝐑𝐓
+𝐀𝐔𝐓𝐎 𝐃𝐄𝐋𝐄𝐓𝐄
+𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐌𝐄𝐒𝐒𝐀𝐆𝐄 𝐂𝐎𝐔𝐒𝐓𝐎𝐌 𝐌𝐎𝐃
+𝐒𝐓𝐑𝐀𝐓 𝐌𝐄𝐒𝐒𝐀𝐆𝐄 𝐂𝐎𝐔𝐒𝐓𝐎𝐌 𝐌𝐎𝐃
+𝐀𝐔𝐓𝐎 𝐅𝐈𝐋𝐓𝐄𝐑 𝐎𝐍 𝐎𝐅𝐅 𝐑𝐄𝐏𝐋𝐀𝐓 𝐌𝐄𝐒𝐒𝐀𝐆𝐄
+𝐀𝐔𝐓𝐎 𝐅𝐈𝐋𝐓𝐄𝐑
+𝐀𝐔𝐓𝐎 𝐃𝐄𝐋𝐄𝐓𝐄
+𝐒𝐇𝐎𝐑𝐓 𝐋𝐈𝐍𝐊 𝐅𝐈𝐋𝐓𝐄𝐑
+𝐌𝐀𝐍𝐔𝐄𝐋 𝐅𝐈𝐋𝐓𝐄𝐑
+𝐆𝐋𝐎𝐁𝐀𝐋 𝐅𝐈𝐋𝐓𝐄𝐑
+𝐅𝐈𝐋𝐄 𝐒𝐓𝐎𝐑𝐄
+𝐋𝐀𝐍𝐆𝐀𝐆𝐄 𝐅𝐔𝐓𝐔𝐑𝐄
+𝐒𝐄𝐋𝐄𝐂𝐓, 𝐒𝐄𝐋𝐄𝐂𝐓𝐄 𝐀𝐋𝐋 𝐅𝐈𝐋𝐄𝐒 𝐌𝐎𝐃
+𝐂𝐎𝐔𝐒𝐓𝐎𝐌 𝐂𝐀𝐏𝐓𝐈𝐎𝐍
+𝐖𝐀𝐑𝐍𝐈𝐍𝐆 𝐌𝐄𝐒𝐒𝐄𝐆𝐄
+𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐌𝐎𝐃
+𝐈𝐃, 𝐈𝐍𝐅𝐎, 𝐉𝐒𝐎𝐍
+𝐁𝐀𝐍, 𝐌𝐔𝐓𝐄, 𝐔𝐍𝐁𝐀𝐍
+𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐈𝐎𝐍 𝐂𝐎𝐌𝐌𝐀𝐍𝐃
+𝐈𝐌𝐃𝐁 𝐒𝐄𝐀𝐑𝐂𝐇
+𝐏𝐑𝐄 𝐃𝐕𝐃 𝐑𝐈𝐏 𝐀𝐋𝐋 𝐏𝐑𝐈𝐍𝐓 𝐃𝐄𝐋𝐄𝐓𝐄𝐒
+𝐈𝐍𝐋𝐈𝐍𝐄 𝐒𝐄𝐀𝐑𝐂𝐇
+𝐒𝐄𝐓𝐓𝐈𝐍𝐆𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃
+𝐂𝐇𝐀𝐓𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃
+𝐔𝐒𝐄𝐑𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃
+𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐃𝐓 𝐓𝐎 𝐏𝐌
+𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 𝐓𝐎 𝐆𝐑𝐎𝐔𝐏
+𝐌𝐔𝐋𝐓𝐈 𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄
+𝐒𝐓𝐀𝐓𝐒
 """
 
 
