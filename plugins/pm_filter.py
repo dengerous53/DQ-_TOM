@@ -604,6 +604,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.delete()
         await query.message.reply_to_message.delete()
         await query.answer("𝐂𝐥𝐨𝐬𝐞𝐝", show_alert=True)
+    elif query.data == "close_data":
+        await query.message.delete()
+        await query.answer("✔️✔️✔️")   
     
     elif query.data == "gfiltersdeleteallconfirm":
         await del_allg(query.message, 'gfilters')
@@ -2573,7 +2576,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "owner_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/creatorbeatz")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/kinzanoufal")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
